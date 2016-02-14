@@ -5,7 +5,7 @@
 
 - Clone a repository you own:
 
-`hub clone {{repo_name}}`
+`hub clone {{ repo_name }}`
 
 - Clone another user repository:
 
