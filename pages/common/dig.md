@@ -13,3 +13,11 @@
 - Specify an alternate DNS server to query (8.8.8.8 is google's public DNS):
 
 `dig @8.8.8.8 {{hostname.com}}`
+
+- Perform a reverse DNS lookup on an IP address (PTR record):
+
+`dig -x 8.8.8.8`
+
+- Find authoritative name servers for the zone and display SOA records:
+
+`dig +nssearch {{hostname.com}}`
