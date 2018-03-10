@@ -1,28 +1,31 @@
 # kubectl
 
-> Kubernetes cli
+> Command line interface for running commands against Kubernetes clusters.
 
-- Gets cluster information
+- List all pods in all namespaces:
+
+`kubectl get pods --all-namespaces`
+
+- List all pods with more information (such as node name):
+
+`kubectl get pods -o wide`
+
+- Update specified pod with the label 'unhealthy' and the value 'true':
+
+`kubectl label pods {{name}} unhealthy=true`
+
+- List all resources with different types:
+
+`kubectl get all`
+
+- Show metrics for all nodes:
+
+`kubectl top node`
+
+- Show metrics for all pods in the default namespace:
+
+`kubectl top pod`
+
+- Print the address of the master and cluster services:
 
 `kubectl cluster-info`
-
-- List all services in the namespace
-
-`kubectl get services`
-
-- Create a resource:
-
-`kubectl create -f ./my-manifest.yaml    `
-
-- Run a service:
-
-`kubectl run {{name}} --image={{image}}`
-
-- Set context:
-
-`kubectl config use-context`
-
-- Inspect logs of a container
-
-`kubectl logs -f -c {{container_name}}`
-
