@@ -6,6 +6,10 @@
 
 `travis init`
 
+- Login into Travis account:
+
+`travis login`
+
 - Enable project:
 
 `travis enable`

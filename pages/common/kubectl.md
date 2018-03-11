@@ -29,3 +29,7 @@
 - Print the address of the master and cluster services:
 
 `kubectl cluster-info`
+
+- Apply configuration:
+
+`kubectl apply -f {{filename}}`
