@@ -4,11 +4,11 @@
 
 - Load session from YAML file:
 
-`tmuxp load {{file}}.yml``
+`tmuxp load {{file}}.yml`
 
 - Load session in ~/.tmuxp:
 
-` tmuxp load {{sessionName}}``
+`tmuxp load {{sessionName}}`
 
 - Create a snapshot of current tmux layout:
 

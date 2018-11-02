@@ -1,8 +1,8 @@
 # travis
 
-> Travis cli
+> CLi tool to interact with Travis api.
 
-- Generates a .travis.yml and enables the project:
+- Generate .travis.yml and enables the project:
 
 `travis init`
 
@@ -14,21 +14,14 @@
 
 `travis enable`
 
-- Checks status of the latest build:
+- Check status of the latest build:
 
 `travis status`
 
-- Opens a build or job in the browser
+- Open a build or job in the browser:
 
 `travis open`
 
--  triggers a new sync with GitHub
+- Trigger a new sync with GitHub:
 
 `travis sync`
-
-- Streams test logs:
-
-`travis logs`
-
-
-

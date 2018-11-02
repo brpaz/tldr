@@ -1,12 +1,12 @@
 # pet
 
-> Simple command-line snippet manager,
+> Simple command-line snippet manager.
 
 - Search snippet:
 
 `pet search`
 
-- Execute snippet
+- Execute snippet:
 
 `pet exec`
 

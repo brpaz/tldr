@@ -1,6 +1,6 @@
 # python-gitlab
 
-> python-gitlab provides a gitlab command-line tool to interact with GitLab servers. It uses a configuration file to define how to connect to the servers.
+> Provides a gitlab command-line tool to interact with GitLab servers. It uses a configuration file to define how to connect to the servers.
 
 - List all projects on GitLab:
 

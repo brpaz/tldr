@@ -1,9 +1,9 @@
-# omf
+# Openshift
 
-> Oh My Fish, the Fishshell Framework.
-> Install packages to extend and modify the fish shell.
+> Focus on writing code and let OpenShift build, run, and scale your apps in the cloud.
 
 - Login:
+
 `oc login`
 
 - Create a project:

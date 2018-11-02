@@ -1,6 +1,6 @@
 # lnav
 
-> LNAV -- The Logfile Navigator
+> LNAV -- The Logfile Navigator.
 
 - Show log messages:
 

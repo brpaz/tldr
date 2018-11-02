@@ -1,12 +1,11 @@
 # kubectx
 
-> Switch between clusters and namespaces in kubectl
+> Switch between clusters and namespaces in kubectl.
 
-- List available contexts
+- List available contexts:
 
 `kubectx`
 
-- Switch to a cluster
+- Switch to a cluster:
 
 `kubectx <NAME>`
-

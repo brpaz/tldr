@@ -21,4 +21,3 @@
 - Deploy to firebase:
 
 `dpl --provider=firebase --token={{token}} --project={{project} --message={{message}}`
-

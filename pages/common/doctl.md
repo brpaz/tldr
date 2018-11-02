@@ -1,6 +1,6 @@
 # doctl
 
-> DigitalOcean client
+> DigitalOcean client.
 
 - Authenticate:
 
@@ -13,4 +13,3 @@
 - Create droplet:
 
 `doctl compute droplet create test --size 1gb --image debian-8-x64 --region nyc1`
-

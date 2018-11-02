@@ -1,8 +1,8 @@
 # gcloud
 
-> Tool for managing Google Cloud
+> Tool for managing Google Cloud.
 
-- Initializes the SDK:
+- Initialize the SDK:
 
 `gcloud init`
 

@@ -1,12 +1,12 @@
 # helm
 
-> Kubernetes package manager,
+> Kubernetes package manager.
 
 - Initialize helm and install Tiller in the cluster:
 
 `helm init`
 
-- Install chart
+- Install chart:
 
 `helm install {{name}}`
 

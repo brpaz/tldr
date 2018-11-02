@@ -1,4 +1,3 @@
-
 # flatpak
 
 > Flatpak is a distro agnostic Linux package manager. Developers can distribute on every Linux distribution simultaneously and with ease.
