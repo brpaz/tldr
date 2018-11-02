@@ -21,15 +21,3 @@
 - Open service by url:
 
 `minikube service -n {{namespace}} --url {{serviceName}}`
-
-- Execute a command:
-
-`Ctrl + E {{command}} <Enter>`
-
-- Perform a substitution in the whole file:
-
-`Ctrl + E replaceall "{{pattern}}" "{{replacement}}" <Enter>`
-
-- Quit:
-
-`Ctrl + Q`

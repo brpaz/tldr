@@ -6,17 +6,21 @@
 
 `kubectl get pods --all-namespaces`
 
-- List all pods with more information (such as node name):
-
-`kubectl get pods -o wide`
-
-- Update specified pod with the label 'unhealthy' and the value 'true':
-
-`kubectl label pods {{name}} unhealthy=true`
-
 - List all resources with different types:
 
 `kubectl get all`
+
+- Run Container:
+
+`kubectl run nginx --image=nginx`
+
+- Run command on a container:
+
+`kubectl exec -it {{container}} -- {{command}}`
+
+- Show logs of a pod:
+
+`kubectl logs -f {{pod}}`
 
 - Show metrics for all nodes:
 
