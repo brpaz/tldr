@@ -9,7 +9,7 @@
     "husky": "0.11.3"
   },
   "scripts": {
-    "precommit": "npm test",
+    "precommit": " ./scripts/create_zip.sh && git add assets/* && npm test",
     "lint-markdown": "markdownlint pages/**/*.md",
     "lint-tldr": "tldr-lint ./pages",
     "test": "bash -c 'markdownlint pages/ && tldr-lint ./pages 2>&1 | tee test_result; test ${PIPESTATUS[0]} -eq 0'",
