@@ -1,11 +1,19 @@
 # kubectx
 
-> Switch between clusters and namespaces in kubectl.
+> Utility to manage and switch between `kubectl` contexts.
 
-- List available contexts:
+- List the contexts:
 
 `kubectx`
 
-- Switch to a cluster:
+- Switch to a named context:
 
-`kubectx <NAME>`
+`kubectx {{name}}`
+
+- Switch to the previous context:
+
+`kubectx -`
+
+- Delete a named context:
+
+`kubectx -d {{name}}`

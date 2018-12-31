@@ -63,15 +63,20 @@ You can access these pages on your computer using one of the following clients:
     [Google Play](https://play.google.com/store/apps/details?id=io.github.hidroh.tldroid)
 - Bash clients:
   - [tldr](https://github.com/raylee/tldr)
-  - [tldr-bash-client](https://github.com/pepa65/tldr-bash-client)
+  - [tldr-bash-client](https://gitlab.com/pepa65/tldr-bash-client)
+- [C# client](https://github.com/principis/tldr-sharp)
 - [C++ client](https://github.com/tldr-pages/tldr-cpp-client):
   `brew install tldr`
+- [Chrome Extension](https://github.com/hill/tldr-chrome) available on
+  [Chrome Web Store](https://chrome.google.com/webstore/detail/tldr-chrome/nnmlddkpgoecicoallmimonoboialpap)
 - [Crystal client](https://github.com/porras/tlcr):
   `brew install porras/tap/tlcr`
 - [Dart client](https://github.com/hterkelsen/tldr):
   `pub global activate tldr`
 - [Dash docset](https://github.com/Moddus/tldr-python-dash-docset):
   Open `Preferences > Downloads > User Contributed` and find `tldr pages` in the list
+- Docker images:
+    - [tldr-docker](https://github.com/nutellinoit/tldr-docker)- Run the `tldr` command via a docker container: `alias tldr='docker run --rm -it -v ~/.tldr/:/root/.tldr/ nutellinoit/tldr'`
 - [Elixir client](https://github.com/edgurgel/tldr_elixir_client)
   (binaries not yet available)
 - [Emacs client](https://github.com/kuanyui/tldr.el), available on
@@ -83,6 +88,12 @@ You can access these pages on your computer using one of the following clients:
   - [4d63.com/tldr](https://4d63.com/tldr):
     `go get 4d63.com/tldr` or `brew install 4d63/tldr/tldr`
     (or [platform binaries](https://github.com/leighmcculloch/tldr/releases))
+  - [github.com/elecprog/tldr](https://github.com/elecprog/tldr):
+    `go get github.com/elecprog/tldr`
+    (or [platform binaries](https://github.com/elecprog/tldr/releases))
+  - [github.com/isacikgoz/tldr](https://github.com/isacikgoz/tldr):
+    `go get github.com/isacikgoz/tldr`
+    (or [platform binaries](https://github.com/isacikgoz/tldr/releases))
 - iOS clients:
   - [tldr-man-page](https://github.com/freesuraj/TLDR), available on
     [App Store](https://appsto.re/sg/IQ0-_.i)
@@ -92,6 +103,7 @@ You can access these pages on your computer using one of the following clients:
   `stack install tldr`
 - [Node.js client](https://github.com/tldr-pages/tldr-node-client):
   `npm install -g tldr`
+- [OCaml client](https://github.com/RosalesJ/tldr-ocaml): `opam install tldr`
 - [Perl5 client](https://github.com/shoichikaji/perl-tldr):
   `cpanm App::tldr`
 - [PHP client](https://github.com/BrainMaestro/tldr-php):

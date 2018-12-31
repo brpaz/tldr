@@ -21,3 +21,11 @@
 - Search for a pattern in files matching a glob (e.g., `README.*`):
 
 `rg {{pattern}} -g {{glob}}`
+
+- Only list matched files -- useful when piping to other commands:
+
+`rg --files-with-matches {{pattern}}`
+
+- Show lines that do not match the given pattern:
+
+`rg --invert-match {{pattern}}`

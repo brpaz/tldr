@@ -1,23 +1,18 @@
-# minikube
 
-> Minikube is a tool that makes it easy to run Kubernetes locally. Minikube runs a single-node Kubernetes cluster inside a VM on your laptop for users looking to try out Kubernetes or develop with it day-to-day.
+> Tool to run Kubernetes locally.
 
-- Start minikube:
+- Start the cluster:
 
 `minikube start`
 
-- Start minikube with extra configurations:
-
-`minikube start --vm-driver=virtualbox --cpus 4 --memory 8192`
-
-- Open minikube dashboard:
-
-`minikube dashboard`
-
-- Get minikube ip:
+- Get the IP address of the cluster:
 
 `minikube ip`
 
-- Open service by url:
+- Access a service named my_service exposed via a node port and get the url:
 
-`minikube service -n {{namespace}} --url {{serviceName}}`
+`minikube service {{my_service}} --url`
+
+- Open kubernetes dashboard in a browser:
+
+`minikube dashboard`

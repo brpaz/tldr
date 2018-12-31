@@ -1,23 +1,35 @@
 # helm
 
-> Kubernetes package manager.
+> Helm is a package manager for Kubernetes.
 
-- Initialize helm and install Tiller in the cluster:
+- Create a helm chart:
 
-`helm init`
+`helm create {{chart_name}}`
 
-- Install chart:
+- Add a new helm repository:
 
-`helm install {{name}}`
+`helm repo add {{repo_name}}`
 
-- Search charts:
+- List helm repositories:
 
-`helm search mysql`
+`helm repo list`
 
-- Show status of installed chart:
+- Update helm repositories:
 
-`helm status {{name}}`
+`helm repo update`
 
-- Add a new repo:
+- Delete a helm repository:
 
-`helm repo add dev {{repo_name}}`
+`helm repo remove {{repo_name}}`
+
+- Install a helm chart:
+
+`helm install {{repo_name}}/{{chart_name}}`
+
+- Download helm chart as a tar archive:
+
+`helm get {{chart_release_name}}`
+
+- Update helm dependencies:
+
+`helm dependency update`
