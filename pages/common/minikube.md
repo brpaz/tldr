@@ -6,6 +6,10 @@
 
 `minikube start`
 
+- Start the cluster with advanced options:
+
+`minikube start --cpus 2 --memory 4096`
+
 - Get the IP address of the cluster:
 
 `minikube ip`
