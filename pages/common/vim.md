@@ -1,37 +1,41 @@
 # vim
 
-> Vim (Vi IMproved), a command-line text editor, provides several modes for different kinds of text manipulation.
-> Pressing `i` enters insert mode. `<Esc>` enters normal mode, which enables the use of Vim commands.
+> Vi IMproved, a programmer's text editor, provides several modes for different kinds of text manipulation.
+> Pressing `i` enters edit mode. `<Esc>` goes back to normal mode, which doesn't allow regular text insertion.
 > More information: <https://www.vim.org>.
 
 - Open a file:
 
-`vim {{path/to/file}}`
+`vim {{file}}`
 
-- Open a file at a specified line number:
+- Enter text editing mode (insert mode):
 
-`vim +{{line_number}} {{path/to/file}}`
+`<Esc>i`
 
-- View Vim's help manual:
+- Copy ("yank") or cut ("delete") the current line (paste it with `P`):
 
-`:help<Enter>`
-
-- Save and Quit:
-
-`:wq<Enter>`
+`<Esc>{{yy|dd}}`
 
 - Undo the last operation:
 
-`u`
+`<Esc>u`
 
 - Search for a pattern in the file (press `n`/`N` to go to next/previous match):
 
-`/{{search_pattern}}<Enter>`
+`<Esc>/{{search_pattern}}<Enter>`
 
-- Perform a regular expression substitution in the whole file:
+- Perform a regex substitution in the whole file:
 
-`:%s/{{regular_expression}}/{{replacement}}/g<Enter>`
+`<Esc>:%s/{{pattern}}/{{replacement}}/g<Enter>`
 
-- Display the line numbers:
+- Save (write) the file, and quit:
 
-`:set nu<Enter>`
+`<Esc>:wq<Enter>`
+
+- Quit without saving:
+
+`<Esc>:q!<Enter>`
+
+- Save with sudo:
+
+`>:w !sudo tee %`
