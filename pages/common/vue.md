@@ -1,13 +1,12 @@
-# vue
+# vue-cli
 
-> Multi-purpose CLI for Vue.js.
-> Some subcommands such as `vue build` have their own usage documentation.
+> Simple CLI for scaffolding Vue.js projects.
 > More information: <https://cli.vuejs.org>.
 
-- Create a new Vue project interactively:
+- Create a new vue project:
 
 `vue create {{project_name}}`
 
-- Create a new project with web UI:
+- Open the vue ui in the default browser:
 
 `vue ui`
