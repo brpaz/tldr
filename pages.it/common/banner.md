@@ -1,7 +1,7 @@
 # banner
 
 > Stampa il testo fornito per argomento come un grande banner in ASCII art.
-> Maggiori informazioni: <https://man.archlinux.org/man/banner.1>.
+> Maggiori informazioni: <https://manned.org/banner>.
 
 - Stampa il testo come un grande banner (le virgolette sono opzionali):
 
@@ -11,6 +11,6 @@
 
 `banner -w {{50}} "{{Hello World}}"`
 
-- Leggi testo da stdin:
+- Leggi testo da `stdin`:
 
 `banner`

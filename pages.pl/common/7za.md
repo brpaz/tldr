@@ -2,7 +2,7 @@
 
 > Archiwizator plików o wysokim współczynniku kompresji.
 > Samodzielna wersja `7z` z obsługą mniejszej liczby typów archiwów.
-> Więcej informacji: <https://www.7-zip.org>.
+> Więcej informacji: <https://manned.org/7za>.
 
 - Zarchiwizuj plik lub katalog:
 
@@ -15,10 +15,6 @@
 - Zarchiwizuj przy użyciu określonego typu archiwum:
 
 `7za a -t{{zip|gzip|bzip2|tar}} {{archiwum}} {{scieżka/do/pliku_lub_katalogu}}`
-
-- Wypisz dostępe typy archiwów:
-
-`7za i`
 
 - Wypisz zawartość pliku archiwum:
 

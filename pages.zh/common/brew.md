@@ -1,7 +1,7 @@
 # brew
 
 > Linux 和 macOS 的包管理器。
-> 更多信息：<https://brew.sh>.
+> 更多信息：<https://docs.brew.sh/Manpage>.
 
 - 安装最新稳定版的配方（formula）或木桶（cask），使用 `--devel` 安装开发版：
 
@@ -31,6 +31,6 @@
 
 `brew info {{配方}}`
 
-- 檢查本地 Homebrew 安裝包是否有潛在問題：
+- 检查本地 Homebrew 安装包是否有潜在问题：
 
 `brew doctor`

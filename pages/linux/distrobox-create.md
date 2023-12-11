@@ -1,13 +1,13 @@
 # distrobox-create
 
-> Create Distrobox containers with an input name and image.
-> The created container will be tightly integrated with the host, allowing sharing of the HOME directory of the user, external storage, external usb devices and graphical apps (X11/Wayland), and audio.
-> More information: <https://distrobox.privatedns.org>.
+> Create a Distrobox container. See also: `tldr distrobox`.
+> The container created will be tightly integrated with the host, allowing sharing of the user's HOME directory, external storage, external USB devices, graphical apps (X11/Wayland), and audio.
+> More information: <https://distrobox.it/usage/distrobox-create>.
 
-- Create a distrobox using the Alpine image:
+- Create a Distrobox container using the Ubuntu image:
 
-`distrobox-create {{container_name}} --image alpine`
+`distrobox-create {{container_name}} --image {{ubuntu:latest}}`
 
-- Clone a distrobox:
+- Clone a Distrobox container:
 
 `distrobox-create --clone {{container_name}} {{cloned_container_name}}`

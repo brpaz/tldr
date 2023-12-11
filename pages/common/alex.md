@@ -4,7 +4,7 @@
 > It helps you find gender favouring, polarising, race related, religion inconsiderate, or other unequal phrasing in text.
 > More information: <https://github.com/get-alex/alex>.
 
-- Analyze text from stdin:
+- Analyze text from `stdin`:
 
 `echo {{His network looks good}} | alex --stdin`
 
@@ -14,7 +14,7 @@
 
 - Analyze a specific file:
 
-`alex {{textfile.md}}`
+`alex {{path/to/file.md}}`
 
 - Analyze all Markdown files except `example.md`:
 

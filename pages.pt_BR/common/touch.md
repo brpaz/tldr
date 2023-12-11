@@ -1,21 +1,20 @@
 # touch
 
-> Atualizar as timestamps de um arquivo para a hora atual.
-> Se o arquivo não existir, cria um arquivo vazio, a menos que seja passado o parâmetro -c ou -h.
-> Mais informações: <https://www.gnu.org/software/coreutils/touch>.
+> Cria arquivos e define tempo de acesso/modificação.
+> Mais informações: <https://manned.org/man/freebsd-13.1/touch>.
 
-- Criar um novo arquivo vazio, ou atualizar as timestamps para a hora atual:
+- Cria arquivos especificados:
 
-`touch {{arquivo}}`
+`touch {{caminho/para/arquivo1 caminho/para/arquivo2 ...}}`
 
-- Definir as timestamps de um arquivo para a hora especificada:
+- Define o tempo de [a]cesso ou [m]odificação do arquivo como o atual e não [c]ria o arquivo se ele não existir:
 
-`touch -t {{YYYYMMDDHHMM.SS}} {{arquivo}}`
+`touch -c -{{a|m}} {{caminho/para/arquivo1 caminho/para/arquivo2 ...}}`
 
-- Usar as timestamps do arquivo1 para definir as timestamps do arquivo2:
+- Define o [t]empo do arquivo para um valor especificado e não [c]ria o arquivo se ele não existir:
 
-`touch -r {{arquivo1}} {{arquivo2}}`
+`touch -c -t {{YYYYMMDDHHMM.SS}} {{caminho/para/arquivo1 caminho/para/arquivo2 ...}}`
 
-- Alterar as timestamps de um arquivo. Não cria novo arquivo se não existir:
+- Define o tempo de um arquivo específico para o tempo de out[r]o arquivo e não [c]ria o arquivo se ele não existir:
 
-`touch -c {{arquivo}}`
+`touch -c -r {{~/.emacs}} {{caminho/para/arquivo1 caminho/para/arquivo2 ...}}`

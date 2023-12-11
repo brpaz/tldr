@@ -8,7 +8,7 @@
 
 `g++ {{path/to/source.cpp}} -o {{path/to/output_executable}}`
 
-- Display (almost) all errors and warnings:
+- Display common warnings:
 
 `g++ {{path/to/source.cpp}} -Wall -o {{path/to/output_executable}}`
 
@@ -19,3 +19,15 @@
 - Include libraries located at a different path than the source file:
 
 `g++ {{path/to/source.cpp}} -o {{path/to/output_executable}} -I{{path/to/header}} -L{{path/to/library}} -l{{library_name}}`
+
+- Compile and link multiple source code files into an executable binary:
+
+`g++ -c {{path/to/source_1.cpp path/to/source_2.cpp ...}} && g++ -o {{path/to/output_executable}} {{path/to/source_1.o path/to/source_2.o ...}}`
+
+- Optimize the compiled program for performance:
+
+`g++ {{path/to/source.cpp}} -O{{1|2|3|fast}} -o {{path/to/output_executable}}`
+
+- Display version:
+
+`g++ --version`

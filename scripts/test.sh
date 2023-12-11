@@ -18,15 +18,29 @@ function exists {
 # but we want to only print if there are actual errors, and not
 # the "All done!" success message.
 function run_black {
-  # skip black check if command is not available in the system.
-  if [ "$CI" != "true" ] && ! exists black; then
-    echo "Skipping black check, command not available."
+  target_black_version=$(awk -F '==' '$1 == "black" { print $2 }' < requirements.txt)
+
+  if grep -qw black <<< "$(pip3 --disable-pip-version-check list)"; then
+    errs=$(python3 -m black scripts --check --required-version ${target_black_version} 2>&1 || true)
+  fi
+
+  if [[ -z $errs ]]; then
+    # skip the black check if the command is not available in the system.
+    if [[ $CI != true ]] && ! exists black; then
+      echo "Skipping black check, command not available."
+      return 0
+    fi
+
+    errs=$(black scripts --check --required-version ${target_black_version} 2>&1 || true)
+  fi
+
+  if [[ ${errs} == *"does not match the running version"* ]]; then
+    echo -e "Skipping black check, required version not available, try running: pip3 install -r requirements.txt"
     return 0
   fi
 
-  # we want to ignore the exit code from black on failure, so that we can
+  # We want to ignore the exit code from black on failure so that we can
   # do the conditional printing below
-  errs=$(black scripts --check 2>&1 || true)
   if [[ ${errs} != "All done!"* ]]; then
      echo -e "${errs}" >&2
      return 1
@@ -34,8 +48,8 @@ function run_black {
 }
 
 function run_flake8 {
-  # skip flake8 check if command is not available in the system.
-  if [ "$CI" != "true" ] && ! exists flake8; then
+  # skip flake8 check if the command is not available in the system.
+  if [[ $CI != true ]] && ! exists flake8; then
     echo "Skipping flake8 check, command not available."
     return 0
   fi
@@ -43,12 +57,18 @@ function run_flake8 {
   flake8 scripts
 }
 
-# Default test function, ran by `npm test`.
+# Default test function, run by `npm test`.
 function run_tests {
-  markdownlint pages*/**/*.md
+  find pages* -name '*.md' -exec markdownlint {} +
   tldr-lint ./pages
   for f in ./pages.*; do
-    tldr-lint --ignore "TLDR003,TLDR004,TLDR005,TLDR015,TLDR104" "${f}"
+    checks="TLDR003,TLDR004,TLDR015,TLDR104"
+    if [[ -L $f ]]; then
+        continue
+    elif [[ $f == *zh* || $f == *zh_TW* ]]; then
+        checks+=",TLDR005"
+    fi
+    tldr-lint --ignore $checks "${f}"
   done
   run_black
   run_flake8
@@ -59,7 +79,7 @@ function run_tests {
 function run_tests_pr {
   errs=$(run_tests 2>&1)
 
-  if [ -n "$errs" ]; then
+  if [[ -n $errs ]]; then
     echo -e "Test failed!\n$errs\n" >&2
     echo 'Sending errors to tldr-bot.' >&2
     echo -n "$errs" | python3 scripts/send-to-bot.py report-errors
@@ -72,7 +92,7 @@ function run_tests_pr {
 function run_checks_pr {
   msgs=$(bash scripts/check-pr.sh)
 
-  if [ -n "$msgs" ]; then
+  if [[ -n $msgs ]]; then
     echo -e "\nCheck PR reported the following message(s):\n$msgs\n" >&2
     echo 'Sending check results to tldr-bot.' >&2
     echo -n "$msgs" | python3 scripts/send-to-bot.py report-check-results
@@ -83,7 +103,7 @@ function run_checks_pr {
 # MAIN
 ###################################
 
-if [ "$CI" = "true" ] && [ "$GITHUB_REPOSITORY" = "tldr-pages/tldr" ] && [ "$PULL_REQUEST_ID" != "" ]; then
+if [[ $CI == true && $GITHUB_REPOSITORY == "tldr-pages/tldr" && $PULL_REQUEST_ID != "" ]]; then
   run_checks_pr
   run_tests_pr
 else

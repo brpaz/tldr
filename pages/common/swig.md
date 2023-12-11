@@ -1,6 +1,6 @@
 # swig
 
-> Generate bindings between C / C++ code and various high level languages such as JavaScript, Python, C#, and more.
+> Generate bindings between C/C++ code and various high level languages such as JavaScript, Python, C#, and more.
 > It uses special .i or .swg files to generate the bindings (C/C++ with SWIG directives, then outputs a C/C++ file that contains all the wrapper code needed to build an extension module.
 > More information: <http://www.swig.org>.
 
@@ -16,6 +16,6 @@
 
 `swig -java {{path/to/swig_file.i}}`
 
-- Generate a binding between C and Ruby and prefix the Ruby module with {{foo::bar::}}:
+- Generate a binding between C and Ruby and prefix the Ruby module with `foo::bar::`:
 
 `swig -ruby -prefix "{{foo::bar::}}" {{path/to/swig_file.i}}`

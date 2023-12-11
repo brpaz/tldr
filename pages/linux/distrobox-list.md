@@ -1,12 +1,13 @@
 # distrobox-list
 
-> List available Distrobox containers. It detects them and lists them separately from the rest of normal podman or Docker containers.
-> More information: <https://distrobox.privatedns.org>.
+> List all Distrobox containers. See also: `tldr distrobox`.
+> Distrobox containers are listed separately from the rest of normal podman or Docker containers.
+> More information: <https://distrobox.it/usage/distrobox-list>.
 
-- List all distrobox containers:
+- List all Distrobox containers:
 
 `distrobox-list`
 
-- List all distrobox containers with verbose information:
+- List all Distrobox containers with verbose information:
 
-`distrobox-list -v`
+`distrobox-list --verbose`

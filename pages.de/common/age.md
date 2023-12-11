@@ -1,13 +1,13 @@
 # age
 
 > Ein einfaches, modernes und sicheres Dateiverschlüsselungswerkzeug.
-> Weitere Informationen: <https://age-encryption.org>.
+> Weitere Informationen: <https://github.com/FiloSottile/age>.
 
 - Generiere eine verschlüsselte Datei, die mit einer Passphrase entschlüsselt werden kann:
 
 `age --passphrase --output {{pfad/zu/verschlüsselter_datei}} {{pfad/zu/unverschlüsselter_datei}}`
 
-- Generiere ein Schlüsselpaar, speichere dabei den privaten Schlüssel in einer unverschlüsselten Datei und gib den öffentlichen Schlüssel zu stdout aus:
+- Generiere ein Schlüsselpaar, speichere dabei den privaten Schlüssel in einer unverschlüsselten Datei und gib den öffentlichen Schlüssel zu `stdout` aus:
 
 `age-keygen --output {{pfad/zu/datei}}`
 

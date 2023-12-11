@@ -2,6 +2,7 @@
 
 > Vim (Vi IMproved), een command-line tekst bewerker, geeft toegang tot verschillende manieren van tekst manipulatie.
 > Drukken op `i` begint invoegmodus. `<Esc>` begint normale modus, wat toegang geeft tot de Vim commando's.
+> Bekijk ook: `vimdiff`, `vimtutor` en `nvim`.
 > Meer informatie: <https://www.vim.org>.
 
 - Open een bestand:
@@ -12,7 +13,7 @@
 
 `vim +{{regel_nummer}} {{pad/naar/bestand}}`
 
-- bekijk de handleiding van Vim:
+- Bekijk de handleiding van Vim:
 
 `:help<Enter>`
 
@@ -20,9 +21,9 @@
 
 `:wq<Enter>`
 
-- Maak de laatste verandering ongedaan:
+- Terug naar normale modues en maak de laatste verandering ongedaan:
 
-`u`
+`<ESC>u`
 
 - Zoek een patroon in het bestand (druk op `n`/`N` om naar de volgende/vorige overeenkomst te gaan):
 

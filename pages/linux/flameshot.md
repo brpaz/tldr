@@ -24,7 +24,7 @@
 
 `flameshot screen --number {{2}}`
 
-- Create a screenshot and print it to the standard output:
+- Create a screenshot and print it to `stdout`:
 
 `flameshot gui --raw`
 
@@ -32,6 +32,6 @@
 
 `flameshot gui --clipboard`
 
-- Create a screenshot with a specific delay in seconds:
+- Create a screenshot with a specific delay in milliseconds:
 
-`flameshot full --delay {{5}}`
+`flameshot full --delay {{5000}}`

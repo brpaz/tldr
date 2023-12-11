@@ -1,13 +1,13 @@
 # age
 
 > Uno strumento semplice, moderno e sicuro per la cifratura di file.
-> Maggiori informazioni: <https://age-encryption.org>.
+> Maggiori informazioni: <https://github.com/FiloSottile/age>.
 
 - Generare un file cifrato che può essere decifrato con una passphrase:
 
 `age --passphrase --output {{percorso/del/file_cifrato}} {{percorso/del/file_non_cifrato}}`
 
-- Generare una coppia di chiavi, salvando la chiave privata in un file non cifrato e stampando sullo stdout la chiave pubblica:
+- Generare una coppia di chiavi, salvando la chiave privata in un file non cifrato e stampando sullo `stdout` la chiave pubblica:
 
 `age-keygen --output {{percorso/del/file}}`
 

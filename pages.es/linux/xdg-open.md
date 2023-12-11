@@ -1,7 +1,7 @@
 # xdg-open
 
 > Abre un archivo o URL en la aplicación predeterminada del usuario.
-> Más información: <https://man.archlinux.org/man/xdg-open.1>.
+> Más información: <https://portland.freedesktop.org/doc/xdg-open.html>.
 
 - Abre el directorio actual en el explorador de archivos predeterminado:
 
@@ -11,9 +11,9 @@
 
 `xdg-open {{https://www.ejemplo.es}}`
 
-- Abre una image en el visor de imágenes predeterminado:
+- Abre una imagen en el visor de imágenes predeterminado:
 
-`xdg-open {{ruta/al/imagen}}`
+`xdg-open {{ruta/a_la/imagen}}`
 
 - Abre un PDF en el visor de PDF predeterminado:
 

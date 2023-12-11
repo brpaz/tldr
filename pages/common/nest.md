@@ -1,23 +1,24 @@
 # nest
 
-> Command Line tool for managing NestJS applications.
+> Command-line tool to initialize, develop, and maintain Nest applications.
+> More information: <https://docs.nestjs.com/cli/overview>.
 
-- Install:
+- Display information about installed nest version:
 
-`npm install -g @nestjs/cli`
+`nest info`
 
-- Generate a new project:
+- Create a new NestJS project in a directory of the same name:
 
-`nest new {{path}}`
+`nest new {{project_name}}`
 
-- Generate a controller:
+- Build a specific NestJS project:
 
-`nest g co {{name}}`
+`nest build {{project_name}}`
 
-- Generate service:
+- Run a specific NestJS project:
 
-`nest g service {{name}}`
+`nest start {{project_name}}`
 
-- Start nest application:
+- Import a library into the current NestJS project:
 
-`nest start`
+`nest add {{library_name}}`

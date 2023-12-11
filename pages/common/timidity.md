@@ -1,6 +1,6 @@
 # timidity
 
-> TiMidity++ is a MIDI file player and convertor.
+> A MIDI file player and converter.
 > More information: <http://timidity.sourceforge.net>.
 
 - Play a MIDI file:
