@@ -2,7 +2,7 @@
 
 > Netzwerk-Erkundungs-Werkzeug und Security / Port Scanner.
 > Manche Funktionen können nur benutzt werden, wenn Nmap mit Root Rechten ausgeführt wird.
-> Weitere Informationen: <https://nmap.org>.
+> Weitere Informationen: <https://nmap.org/book/man.html>.
 
 - Überprüfe ob eine IP-Adresse online ist und versuche, das Betriebssystem herauszufinden:
 
@@ -10,7 +10,7 @@
 
 - Überprüfe nur ob die angegebenen Hosts online sind (Ping Scan) und ihre Domain-Namen:
 
-`nmap -sn {{ip_oder_hostname}} {{optional_noch_eine_addresse}}`
+`sudo nmap -sn {{ip_oder_hostname}} {{optional_noch_eine_addresse}}`
 
 - Scanne zusätzlich mit Skripten, Service-Erkennung, Betriebssystem-Fingerprinting und Traceroute:
 
@@ -28,7 +28,7 @@
 
 `nmap --script "default and safe" {{addresse_oder_addressen}}`
 
-- Scanne einen Web-Server, der auf den Standard Ports 80 und 443 läuft, mit allen verfügbaren 'http-*' NSE Scripts:
+- Scanne einen Web-Server, der auf den Standard Ports 80 und 443 läuft, mit allen verfügbaren 'http-*' NSE Skripten:
 
 `nmap --script "http-*" {{addresse_oder_addressen}} -p 80,443`
 

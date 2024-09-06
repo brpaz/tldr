@@ -17,9 +17,9 @@
 
 - Ejecuta una acción específica:
 
-`act -a {{action_id}}`
+`act -a {{identificador_de_acción}}`
 
-- No ejecuta las acciones (p.e. simular una ejecución):
+- Simula una acción:
 
 `act -n`
 

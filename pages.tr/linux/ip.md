@@ -2,7 +2,7 @@
 
 > Yönlendirmeyi, aygıtları, kural yönlendirmesini ve tünelleri görüntüle / değiştir.
 > `ip address` gibi bazı alt komutların kendi kullanım belgeleri vardır.
-> Daha fazla bilgi için: <https://www.man7.org/linux/man-pages/man8/ip.8.html>.
+> Daha fazla bilgi için: <https://www.manned.org/ip.8>.
 
 - Arayüzlerin bilgilerini ayrıntılı bir şekilde listele:
 
@@ -26,7 +26,7 @@
 
 - Bir arayüzü etkinleştir/devre dışı bırak:
 
-`ip link set {{arayüz}} up/down`
+`ip link set {{arayüz}} {{up|down}}`
 
 - Bir arayüze IP adresi ekle/sil:
 

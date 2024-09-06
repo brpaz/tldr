@@ -1,24 +1,24 @@
 # cat
 
 > Imprime y concatena archivos.
-> Más información: <https://www.gnu.org/software/coreutils/cat>.
+> Más información: <https://manned.org/cat.1posix>.
 
-- Imprime el contenido de un archivo por la salida estándar:
+- Imprime el contenido de un fichero a `stdout`:
 
-`cat {{archivo}}`
+`cat {{ruta/al/archivo}}`
 
-- Concatena múltiples archivos dentro de un archivo determinado:
+- Concatena varios archivos en un archivo de salida:
 
-`cat {{archivo1}} {{archivo2}} > {{archivo_final}}`
+`cat {{ruta/al/archivo1 ruta/al/archivo2 ...}} > {{ruta/al/archivo_salida}}`
 
-- Añade múltiples archivos dentro de un archivo determinado:
+- Añade el contenido de varios archivos a un archivo de salida:
 
-`cat {{archivo1}} {{archivo2}} >> {{archivo_final}}`
+`cat {{ruta/al/archivo1 ruta/al/archivo2 ...}} >> {{ruta/al/archivo_salida}}`
 
-- Muestra el número de líneas de un archivo:
+- Copia el contenido de un archivo en un archivo de salida sin almacenamiento en el búfer:
 
-`cat -n {{archivo}}`
+`cat -u {{/dev/tty12}} > {{/dev/tty13}}`
 
-- Muestra los carácteres no imprimibles y espacios en blanco (con el prefijo `M-` si no es ASCII):
+- Copia `stdin` en un archivo:
 
-`cat -v -t -e {{archivo}}`
+`cat - > {{ruta/al/archivo}}`

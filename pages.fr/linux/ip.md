@@ -2,7 +2,7 @@
 
 > Affiche / manipule l'adressage, le routage, les interfaces et périphériques réseau, les règles de routage et les tunnels.
 > Certaines commandes comme `ip address` ont leur propre documentation.
-> Plus d'informations : <https://www.man7.org/linux/man-pages/man8/ip.8.html>.
+> Plus d'informations : <https://www.manned.org/ip.8>.
 
 - Liste les interfaces avec des infos détaillées :
 
@@ -26,7 +26,7 @@
 
 - Active/Désactive une interface :
 
-`ip link set {{interface}} up/down`
+`ip link set {{interface}} {{up|down}}`
 
 - Ajoute/Supprime une adresse ip à une interface :
 

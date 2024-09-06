@@ -1,37 +1,37 @@
 # nmap
 
-> Herramienta de exploración de redes y escáner de seguridad / puertos.
-> Algunas características solo funcionan si ejecutamos Nmap con privilegios.
-> Más información: <https://nmap.org>.
+> Herramienta de exploración de redes y escáner de seguridad/puertos.
+> Algunas funciones (p. ej. escaneo SYN) se activan solamente cuando `nmap` es ejecutado con los permisos del superusuario.
+> Más información: <https://nmap.org/book/man.html>.
 
-- Comprueba si una dirección IP está activa, e intenta averiguar el sistema operativo del servidor correspondiente:
+- Escanea los top 1000 puertos de un host remoto con varios niveles de [v]erbosidad:
 
-`nmap -O {{ip_o_hostname}}`
+`nmap -v{{1|2|3}} {{ip_o_nombre_de_host}}`
 
-- Intenta determinar si los hosts están activos y cuáles son sus nombres:
+- Ejecuta un barrido de ping sobre una subred o hosts específicos:
 
-`nmap -sn {{ip_o_hostname}} {{opcional_otra_direccion}}`
+`nmap -T5 -sn {{192.168.0.0/24|ip_o_nombre_de_host1,ip_o_nombre_de_host2,...}}`
 
-- Como el anterior, pero también ejecuta un escaneo de 1000 puertos TCP por defecto, si el host está activo:
+- Activa la detección de sistemas operativos, la detección de versión, el escaneo con guiones y traceroute:
 
-`nmap {{ip_o_hostname}} {{opcional_otra_direccion}}`
+`sudo nmap -A {{ip_o_nombre_de_host1,ip_o_nombre_de_host2,...}}`
 
-- Detecta también scripts, servicios, sistema operativo y traceroute:
+- Escanea una lista de puertos (invoca `nmap` con `-p-` para escanear todos los puertos desde 1 a 65535):
 
-`nmap -A {{direccion_o_direcciones}}`
+`nmap -p {{puerto1,puerto2,...}} {{ip_o_host1,ip_o_host2,...}}`
 
-- Asume una buena conexión y acelera la ejecución:
+- Detecta el servicio y versión de los top 1000 puertos usando los guiones NSE por defecto y escribe los resultados (`-oA`) en archivos de salida:
 
-`nmap -T4 {{direccion_o_direcciones}}`
+`nmap -sC -sV -oA {{top-1000-ports}} {{ip_o_host1,ip_o_host2,...}}`
 
-- Escanea una lista específica de puertos (para todos los puertos `1-65535` usar `-p-`):
+- Escanea objetivo(s) cuidadosamente usando los guiones NSE `default and safe`:
 
-`nmap -p {{puerto1,puerto2,…,puertoN}} {{direccion_o_direcciones}}`
+`nmap --script "default and safe" {{ip_o_host1,ip_o_host2,...}}`
 
-- Realiza un escaneo TCP y UDP (usar `-sU` para solo UDP, `-sZ` para SCTP, `-sO` para IP):
+- Escanea servidores web ejecutándose en los puertos estándares 80 y 443 usando todos los guiones `http-*` NSE disponibles:
 
-`nmap -sSU {{direccion_o_direcciones}}`
+`nmap --script "http-*" {{ip_o_host1,ip_o_host2,...}} -p 80,443`
 
-- Realiza un escaneo total de puertos, servicios, detección de versiones con todos los scripts NSE por defecto contra un host para determinar debilidades e información:
+- Intenta evadir los sistemas de detección y prevención de intrusos escaneando extremadamente lento (`-T0`) y usando direcciones de origen de señuelo (`-D`), paquetes [f]ragmentados, datos aleatorios y otros métodos:
 
-`nmap -sC -sV {{direccion_o_direcciones}}`
+`sudo nmap -T0 -D {{ip_de_señuelo1,ip_de_señuelo2,...}} --source-port {{53}} -f --data-length {{16}} -Pn {{ip_o_host}}`

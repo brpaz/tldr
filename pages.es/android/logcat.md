@@ -1,7 +1,7 @@
 # logcat
 
 > Vuelca un registro de mensajes del sistema, incluyendo seguimientos de pila cuando ocurren errores, y mensajes informativos enviados por las aplicaciones.
-> Más información: <https://developer.android.com/studio/command-line/logcat>.
+> Más información: <https://developer.android.com/tools/logcat>.
 
 - Muestra registros del sistema:
 
@@ -17,8 +17,8 @@
 
 - Muestra registros de un proceso específico:
 
-`logcat --pid={{pid}}`
+`logcat --pid {{pid}}`
 
 - Muestra registros del proceso de un paquete específico:
 
-`logcat --pid=$(pidof -s {{paquete}})`
+`logcat --pid $(pidof -s {{paquete}})`

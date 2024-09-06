@@ -2,7 +2,7 @@
 
 > Mostra / manipola routing, dispositivi, criteri di routing e tunnel.
 > Alcuni sottocomandi, come `ip address`, hanno una propria documentazione d'uso.
-> Maggiori informazioni: <https://www.man7.org/linux/man-pages/man8/ip.8.html>.
+> Maggiori informazioni: <https://www.manned.org/ip.8>.
 
 - Elenca le interfacce con informazioni dettagliate:
 
@@ -26,7 +26,7 @@
 
 - Attiva/disattiva un'interfaccia:
 
-`ip link set {{interfaccia}} up/down`
+`ip link set {{interfaccia}} {{up|down}}`
 
 - Aggiungi/elimina un indirizzo IP a/da un'interfaccia:
 

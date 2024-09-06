@@ -1,7 +1,7 @@
 # cat
 
 > Dosyaları yazdır ve birleştir.
-> Daha fazla bilgi için: <https://www.gnu.org/software/coreutils/cat>.
+> Daha fazla bilgi için: <https://manned.org/cat.1posix>.
 
 - Bir dosyanın içeriğini standart çıktıya yazdır:
 
@@ -9,16 +9,8 @@
 
 - Birkaç dosyayı bir çıktı dosyasında birleştir:
 
-`cat {{dosya/yolu1}} {{dosya/yolu2}} > {{çıktı/dosyası/yolu}}`
+`cat {{dosya/yolu1 dosya/yolu2 ...}} > {{çıktı/dosyası/yolu}}`
 
 - Birkaç dosyayı bir çıktı dosyasına ekle:
 
-`cat {{dosya/yolu1}} {{dosya/yolu2}} >> {{çıktı/dosyası/yolu}}`
-
-- Tüm çıkış satırlarını numaralandır:
-
-`cat -n {{dosya/yolu}}`
-
-- Yazdırılamayan ve boşluk karakterleri görüntüle (ASCII değilse `M-` önekiyle):
-
-`cat -v -t -e {{dosya/yolu}}`
+`cat {{dosya/yolu1 dosya/yolu2 ...}} >> {{çıktı/dosyası/yolu}}`

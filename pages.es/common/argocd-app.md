@@ -5,9 +5,9 @@
 
 - Lista aplicaciones:
 
-`argocd app list --output {{json|yaml|wide}} `
+`argocd app list --output {{json|yaml|wide}}`
 
-- Obtiene detalles de la aplicación:
+- Obtén los detalles de la aplicación:
 
 `argocd app get {{nombre_de_la_aplicacion}} --output {{json|yaml|wide}}`
 
@@ -33,4 +33,4 @@
 
 - Retrocede la aplicación a una versión anterior desplegada por ID de historial (eliminando recursos inesperados):
 
-`argocd app rollback {{nombre_de_la_aplicacion}} {{history_id}} --prune`
+`argocd app rollback {{nombre_de_la_aplicacion}} {{identificador_de_historial}} --prune`

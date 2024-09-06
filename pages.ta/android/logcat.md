@@ -1,7 +1,7 @@
 # logcat
 
 > கணினி செய்திகளின் பதிவை டம்ப் செய்யவும்.
-> மேலும் விவரத்திற்கு: <https://developer.android.com/studio/command-line/logcat>.
+> மேலும் விவரத்திற்கு: <https://developer.android.com/tools/logcat>.
 
 - கணினி பதிவுகளைக் காண்பி:
 
@@ -17,8 +17,8 @@
 
 - ஒரு குறிப்பிட்ட PIDக்கான பதிவுகளை காண்பி:
 
-`logcat --pid={{pid}}`
+`logcat --pid {{pid}}`
 
 - ஒரு குறிப்பிட்ட தொகுப்பின் செயல்முறைக்கான பதிவுகளை காண்பி:
 
-`logcat --pid=$(pidof -s {{package}})`
+`logcat --pid $(pidof -s {{package}})`

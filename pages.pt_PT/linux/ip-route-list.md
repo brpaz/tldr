@@ -1,7 +1,7 @@
-# ip-route-list
+# ip route list
 
-> Este comando é um alias de `ip-route-show`.
+> Este comando é um alias de  `ip route show`.
 
-- Ver documentação do comando original:
+- Exibe documentação do comando original:
 
 `tldr ip-route-show`

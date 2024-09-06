@@ -1,4 +1,4 @@
-# Accelerate
+# accelerate
 
 > A library that enables the same PyTorch code to be run across any distributed configuration.
 > More information: <https://huggingface.co/docs/accelerate/index>.
@@ -25,4 +25,4 @@
 
 - Run a model on multi-GPU with Accelerate, with 2 machines:
 
-`accelerate launch {{path/to/script.py}} --multi_gpu --num_machines {{2}}`
+`accelerate launch {{path/to/script.py}} --multi_gpu --num_machines 2`

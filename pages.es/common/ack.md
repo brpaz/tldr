@@ -1,7 +1,7 @@
 # ack
 
 > Una herramienta de búsqueda como grep, optimizada para desarrolladores.
-> Ver también: `rg`, que es más rápido.
+> Vea también: `rg`, que es más rápido.
 > Más información: <https://beyondgrep.com/documentation>.
 
 - Busca archivos que contengan una cadena o expresión regular en el directorio actual de forma recursiva:
@@ -18,11 +18,11 @@
 
 - Limita la búsqueda a archivos de un tipo específico:
 
-`ack --type={{ruby}} "{{patrón_de_búsqueda}}"`
+`ack --type {{ruby}} "{{patrón_de_búsqueda}}"`
 
-- No buscar en archivos dado un tipo específico:
+- Busca archivos que no sean de un cierto tipo:
 
-`ack --type=no{{ruby}} "{{patrón_de_búsqueda}}"`
+`ack --type no{{ruby}} "{{patrón_de_búsqueda}}"`
 
 - Cuenta el número total de coincidencias encontradas:
 

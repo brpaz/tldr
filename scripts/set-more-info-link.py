@@ -1,11 +1,66 @@
 #!/usr/bin/env python3
 # SPDX-License-Identifier: MIT
 
-import argparse
-import os
+"""
+A Python script to add or update the "More information" link for all translations of a page.
+
+Note: If the current directory or one of its parents is called "tldr", the script will assume it is the tldr root, i.e., the directory that contains a clone of https://github.com/tldr-pages/tldr
+If the script doesn't find it in the current path, the environment variable TLDR_ROOT will be used as the tldr root. Also, ensure 'git' is available.
+
+Usage:
+    python3 scripts/set-more-info-link.py [-p PAGE] [-S] [-l LANGUAGE] [-s] [-n] [LINK]
+
+Options:
+    -p, --page PAGE
+        Specify the page in the format "platform/command". This option allows setting the link for a specific page.
+    -S, --sync
+        Synchronize each translation's "More information" link (if exists) with that of the English page.
+    -l, --language LANGUAGE
+        Specify the language, a POSIX Locale Name in the form of "ll" or "ll_CC" (e.g. "fr" or "pt_BR").
+    -s, --stage
+        Stage modified pages (requires 'git' on $PATH and TLDR_ROOT to be a Git repository).
+    -n, --dry-run
+        Show what changes would be made without actually modifying the page.
+
+Positional Argument:
+    LINK          The link to be set as the "More information" link.
+
+Examples:
+    1. Set the link for a specific page:
+       python3 scripts/set-more-info-link.py -p common/tar https://example.com
+       python3 scripts/set-more-info-link.py --page common/tar https://example.com
+
+    2. Read English pages and synchronize the "More information" link across translations:
+       python3 scripts/set-more-info-link.py -S
+       python3 scripts/set-more-info-link.py --sync
+
+    3. Read English pages and synchronize the "More information" link for Brazilian Portuguese pages only:
+       python3 scripts/set-more-info-link.py -S -l pt_BR
+       python3 scripts/set-more-info-link.py --sync --language pt_BR
+
+    4. Read English pages, synchronize the "More information" link across translations and stage modified pages for commit:
+       python3 scripts/set-more-info-link.py -Ss
+       python3 scripts/set-more-info-link.py --sync --stage
+
+    5. Show what changes would be made across translations:
+       python3 scripts/set-more-info-link.py -Sn
+       python3 scripts/set-more-info-link.py --sync --dry-run
+"""
+
 import re
-import subprocess
-import sys
+from pathlib import Path
+from _common import (
+    IGNORE_FILES,
+    Colors,
+    get_tldr_root,
+    get_pages_dir,
+    get_target_paths,
+    get_locale,
+    get_status,
+    stage,
+    create_colored_line,
+    create_argument_parser,
+)
 
 labels = {
     "en": "More information:",
@@ -47,25 +102,34 @@ labels = {
     "zh": "更多信息：",
 }
 
-IGNORE_FILES = (".DS_Store",)
 
+def set_link(
+    path: Path, link: str, dry_run: bool = False, language_to_update: str = ""
+) -> str:
+    """
+    Write a "More information" link in a page to disk.
 
-def get_tldr_root():
-    # if this script is running from tldr/scripts, the parent's parent is the root
-    f = os.path.normpath(__file__)
-    if f.endswith("tldr/scripts/set-more-info-link.py"):
-        return os.path.dirname(os.path.dirname(f))
+    Parameters:
+    path (string): Path to a page
+    link (string): The "More information" link to insert.
+    dry_run (bool): Whether to perform a dry-run, i.e. only show the changes that would be made.
+    language_to_update (string): Optionally, the language of the translation to be updated.
 
-    if "TLDR_ROOT" in os.environ:
-        return os.environ["TLDR_ROOT"]
-    print(
-        "\x1b[31mPlease set TLDR_ROOT to the location of a clone of https://github.com/tldr-pages/tldr."
-    )
-    sys.exit(1)
+    Returns:
+    str: Execution status
+         "" if the page does not need an update or if the locale does not match language_to_update.
+         "\x1b[36mlink added"
+         "\x1b[34mlink updated"
+         "\x1b[36mlink would be added"
+         "\x1b[34mlink would updated"
+    """
 
+    locale = get_locale(path)
+    if language_to_update != "" and locale != language_to_update:
+        # return empty status to indicate that no changes were made
+        return ""
 
-def set_link(file, link):
-    with open(file, encoding="utf-8") as f:
+    with path.open(encoding="utf-8") as f:
         lines = f.readlines()
 
     desc_start = 0
@@ -78,13 +142,6 @@ def set_link(file, link):
         if not lines[i + 1].startswith(">") and desc_start != 0:
             desc_end = i
             break
-
-    # compute locale
-    pages_dir = os.path.basename(os.path.dirname(os.path.dirname(file)))
-    if "." in pages_dir:
-        _, locale = pages_dir.split(".")
-    else:
-        locale = "en"
 
     # build new line
     if locale in ["bn", "hi", "ne"]:
@@ -103,20 +160,36 @@ def set_link(file, link):
     if re.search(r"^>.*<.+>", lines[desc_end]):
         # overwrite last line
         lines[desc_end] = new_line
-        status = "\x1b[34mlink updated"
+        action = "updated"
     else:
         # add new line
         lines.insert(desc_end + 1, new_line)
-        status = "\x1b[36mlink added"
+        action = "added"
 
-    with open(file, "w", encoding="utf-8") as f:
-        f.writelines(lines)
+    status = get_status(action, dry_run, "link")
+
+    if not dry_run:  # Only write to the path during a non-dry-run
+        with path.open("w", encoding="utf-8") as f:
+            f.writelines(lines)
 
     return status
 
 
-def get_link(file):
-    with open(file, encoding="utf-8") as f:
+def get_link(path: Path) -> str:
+    """
+    Determine whether the given path has a "More information" link.
+
+    Parameters:
+    path (Path): Path to a page
+
+    Returns:
+    str: "" If the path doesn't exit or does not have a link,
+         otherwise return the "More information" link.
+    """
+
+    if not path.exists():
+        return ""
+    with path.open(encoding="utf-8") as f:
         lines = f.readlines()
 
     desc_start = 0
@@ -137,102 +210,84 @@ def get_link(file):
         return ""
 
 
-def sync(root, pages_dirs, command, link):
-    rel_paths = []
+def sync(
+    root: Path,
+    pages_dirs: list[Path],
+    command: str,
+    link: str,
+    dry_run: bool = False,
+    language_to_update: str = "",
+) -> list[Path]:
+    """
+    Synchronize a "More information" link into all translations.
+
+    Parameters:
+    root (Path): TLDR_ROOT
+    pages_dirs (list of Path's): Path's of page entry and platform, e.g. "page.fr/common".
+    command (str): A command like "tar".
+    link (str): A link like "https://example.com".
+    dry_run (bool): Whether to perform a dry-run, i.e. only show the changes that would be made.
+    language_to_update (str): Optionally, the language of the translation to be updated.
+
+    Returns:
+    list (list of Path's): A list of Path's to be staged into git, using by --stage option.
+    """
+    paths = []
     for page_dir in pages_dirs:
-        path = os.path.join(root, page_dir, command)
-        if os.path.exists(path):
-            rel_path = path.replace(f"{root}/", "")
-            rel_paths.append(rel_path)
-            status = set_link(path, link)
+        path = root / page_dir / command
+        if path.exists():
+            status = set_link(path, link, dry_run, language_to_update)
             if status != "":
-                print(f"\x1b[32m{rel_path} {status}\x1b[0m")
-    return rel_paths
+                rel_path = "/".join(path.parts[-3:])
+                paths.append(rel_path)
+                print(create_colored_line(Colors.GREEN, f"{rel_path} {status}"))
+    return paths
 
 
 def main():
-    parser = argparse.ArgumentParser(
-        description='Sets the "More information" link for all translations of a page'
-    )
-    parser.add_argument(
-        "-p",
-        "--page",
-        type=str,
-        required=False,
-        default="",
-        help='page name in the format "platform/command.md"',
-    )
-    parser.add_argument(
-        "-s",
-        "--stage",
-        action="store_true",
-        default=False,
-        help="stage modified pages (requires `git` to be on $PATH and TLDR_ROOT to be a Git repository)",
-    )
-    parser.add_argument(
-        "-S",
-        "--sync",
-        action="store_true",
-        default=False,
-        help="synchronize each translation's more information link (if exists) with that of English page",
+    parser = create_argument_parser(
+        'Sets the "More information" link for all translations of a page'
     )
     parser.add_argument("link", type=str, nargs="?", default="")
     args = parser.parse_args()
 
     root = get_tldr_root()
-    pages_dirs = [d for d in os.listdir(root) if d.startswith("pages")]
+    pages_dirs = get_pages_dir(root)
 
-    rel_paths = []
+    target_paths = []
 
     # Use '--page' option
     if args.page != "":
-        target_paths = []
-
-        if not args.page.lower().endswith(".md"):
-            args.page = f"{args.page}.md"
-
-        for pages_dir in pages_dirs:
-            pages_dir_path = os.path.join(root, pages_dir)
-            platforms = [i for i in os.listdir(pages_dir_path) if i not in IGNORE_FILES]
-            for platform in platforms:
-                platform_path = os.path.join(pages_dir_path, platform)
-                commands = [
-                    f"{platform}/{p}"
-                    for p in os.listdir(platform_path)
-                    if p not in IGNORE_FILES
-                ]
-                if args.page in commands:
-                    path = os.path.join(pages_dir_path, args.page)
-                    target_paths.append(path)
-
-        target_paths.sort()
+        target_paths += get_target_paths(args.page, pages_dirs)
 
         for path in target_paths:
-            rel_path = path.replace(f"{root}/", "")
-            rel_paths.append(rel_path)
-            status = set_link(path, args.link)
+            rel_path = "/".join(path.parts[-3:])
+            status = set_link(path, args.link, args.dry_run, args.language)
             if status != "":
-                print(f"\x1b[32m{rel_path} {status}\x1b[0m")
+                print(create_colored_line(Colors.GREEN, f"{rel_path} {status}"))
 
     # Use '--sync' option
     elif args.sync:
-        pages_dirs.remove("pages")
-        en_page = os.path.join(root, "pages")
-        platforms = [i for i in os.listdir(en_page) if i not in IGNORE_FILES]
+        pages_dirs.remove(root / "pages")
+        en_path = root / "pages"
+        platforms = [i.name for i in en_path.iterdir() if i.name not in IGNORE_FILES]
         for platform in platforms:
-            platform_path = os.path.join(en_page, platform)
+            platform_path = en_path / platform
             commands = [
-                f"{platform}/{p}"
-                for p in os.listdir(platform_path)
-                if p not in IGNORE_FILES
+                f"{platform}/{page.name}"
+                for page in platform_path.iterdir()
+                if page.name not in IGNORE_FILES
             ]
             for command in commands:
-                link = get_link(os.path.join(root, "pages", command))
+                link = get_link(root / "pages" / command)
                 if link != "":
-                    rel_paths += sync(root, pages_dirs, command, link)
+                    target_paths += sync(
+                        root, pages_dirs, command, link, args.dry_run, args.language
+                    )
 
-    if args.stage:
-        subprocess.call(["git", "add", *rel_paths], cwd=root)
+    # Use '--stage' option
+    if args.stage and not args.dry_run and len(target_paths) > 0:
+        stage(target_paths)
 
 
 if __name__ == "__main__":

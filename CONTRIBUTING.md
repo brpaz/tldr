@@ -21,6 +21,10 @@ Contributions to the tldr-pages project are [most welcome](GOVERNANCE.md)!
 
 All `tldr` pages are stored in Markdown right here on GitHub. Just open an issue or send a pull request, and we'll incorporate it as soon as possible.
 
+> [!IMPORTANT]
+> While this file contains general instructions to get started, it is suggested to read the [style guide](contributing-guides/style-guide.md) and [translation templates](contributing-guides/translation-templates)
+> for more detailed information about the syntax and commonly used translation terms.
+
 To get started, please [sign](https://cla-assistant.io/tldr-pages/tldr) the
 [Contributor License Agreement](https://gist.github.com/waldyrious/e50feec13683e565769fbd58ce503d4e).
 
@@ -33,7 +37,7 @@ The basic format of a `tldr` page is a set of concrete usage examples.
 
 Here are a few guidelines to get started:
 
-1. Try to keep pages at around 5 examples. Pages can be longer or shorter when appropriate, but don't exceed the maximum of eight examples.
+1. Try to keep pages at around 5 examples. Pages can be longer or shorter when appropriate but don't exceed the maximum of eight examples.
    Remember, it's OK if the page doesn't cover everything; that's what `man` is for.
 2. When in doubt, keep new command-line users in mind. Err on the side of clarity rather than terseness.
    For example, commands that require `sudo` should include it directly in the examples.
@@ -47,6 +51,33 @@ These are all guidelines, not strict rules.
 Use proper judgement, keeping simplicity and user-friendliness as the top priorities.
 
 When in doubt, have a look at a few existing pages :).
+
+## Directory structure
+
+The English pages directory is called `pages`, under which the platform directories are present. Language-specific directories must follow the pattern `pages.<locale>`, where `<locale>` is a
+[POSIX Locale Name](https://www.gnu.org/software/gettext/manual/html_node/Locale-Names.html#Locale-Names) in the form of `<language>[_<country>]`, where:
+
+- `<language>` is the shortest [ISO 639](https://en.wikipedia.org/wiki/ISO_639) language code for the chosen language (see [here](https://en.wikipedia.org/wiki/List_of_ISO_639-2_codes) for a complete list).
+- `<country>` is the two-letter [ISO 3166-1](https://en.wikipedia.org/wiki/ISO_3166-1) country code for the chosen region (see [here](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements) for a complete list).
+
+The `<country>` code is optional and should only be added when there is a substantial difference between a language (`ll`) and its regional dialects (`ll_CC1`, `ll_CC2`, etc.).
+For example, both `fr_FR` and `fr_BE` should fall under the same `pages.fr` directory since there virtually is no difference in writing between standard French and Belgian French.
+
+### Platform directories
+
+The `pages` directory and `pages.*` language-specific directories contain the platform directories, if they have at least one page of that platform.
+
+1. If the command is available for **two or more** platforms, put it **under the `common` directory**.
+2. If the command is **only** available for **one** platform, these are the available directories followed by their right platform:
+
+- `android`: Android
+- `freebsd`: FreeBSD
+- `openbsd`: OpenBSD
+- `osx`: OSX/Mac OS/macOS (will be replaced by `macos`)
+- `linux`: any Linux distro
+- `netbsd`: NetBSD
+- `sunos`: SunOS
+- `windows`: Windows
 
 ## Markdown format
 
@@ -71,7 +102,7 @@ As a quick reference, the format of each page should match the following templat
 For page descriptions, you can additionally use ``See also: `command`.`` and [subcommand reference](#subcommands).
 
 > [!NOTE]
-> While we suggest only two lines for the page description, it is acceptable to have more than two lines if it necessary to add additional information (i.e. [`pacman`](https://github.com/tldr-pages/tldr/blob/main/pages/linux/pacman.md)).
+> While we suggest only two lines for the page description, it is acceptable to have more than two lines if it is necessary to add additional information (i.e. [`pacman`](https://github.com/tldr-pages/tldr/blob/main/pages/linux/pacman.md)).
 
 To see some examples of preexisting pages, you can look at:
 
@@ -84,6 +115,14 @@ Other examples but not limited to of our placeholder syntax are:
 
 - `{{path/to/directory}}`
 - `{{path/to/directory1 path/to/directory2 ...}}`
+
+However, if the description suggests a specific value, leave it as part of the command, and **not** as a placeholder, for example:
+
+```md
+- Display records more recent than 3 days:
+
+`lastlog --time 3`
+```
 
 For more detailed formatting guidelines,
 refer to the [style guide](contributing-guides/style-guide.md).
@@ -98,31 +137,50 @@ To create a page for a subcommand, the program and subcommand need to be separat
 
 You should always add a base page (e.g. `git`) that describes the program and basic switches like `--version` or `--help`.
 
-To let others know about the subcommand, add a note saying ``Some subcommands such as `example command` have their own usage documentation`` to the base page.
+### Referencing subcommands
+
+The following methods can be used to reference subcommands:
+
+- You can add a note saying ``Some subcommands such as `example command` have their own usage documentation`` to the main page. (See the [subcommand reference](/contributing-guides/translation-templates/subcommand-mention.md) page for translation templates.)
+- You can use ``See also: `command1`, `command2`.`` template to reference similar commands, aliases and subcommands.
+- Alternatively, the whole page can be converted to reference the main subcommands.
+
+For example:
+
+```md
+# command
+
+> Short, snappy description.
+> Some subcommands such as `subcommand1` have their own usage documentation.
+> More information: <https://url-to-upstream.tld>.
+
+- View documentation for creating something:
+
+`tldr command-subcommand1`
+
+- View documentation for managing something:
+
+`tldr command-subcommand2`
+```
 
 See these examples for reference:
 
 - [git](pages/common/git.md)
-- [git-commit](pages/common/git-commit.md)
-- [aws](pages/common/aws.md)
-- [aws-s3](pages/common/aws-s3.md)
+- [distrobox-create](pages/linux/distrobox-create.md)
+- [nmcli](pages/linux/nmcli.md)
 
 ## Translations
 
-Translation of pages can be done by simply creating the corresponding page within the appropriate language-specific directory, creating that as well if it does not already exist.
-
 > [!IMPORTANT]
-> Translations of pages should be done based on the English (US) page in the `pages` directory. If the English pages doesn't exist for the command, it should be added first in a PR before creating a translation.
+> Translations of pages should be done based on the English (US) page in the `pages` directory. If the English pages don't exist for the command, it should be added first in a PR before creating a translation.
 
-Language specific directories must follow the pattern `pages.<locale>`, where `<locale>` is a [POSIX Locale Name](https://www.gnu.org/software/gettext/manual/html_node/Locale-Names.html#Locale-Names) in the form of `<language>[_<country>]`, where:
-
-- `<language>` is the shortest [ISO 639](https://en.wikipedia.org/wiki/ISO_639) language code for the chosen language (see [here](https://en.wikipedia.org/wiki/List_of_ISO_639-2_codes) for a complete list).
-- `<country>` is the two-letter [ISO 3166-1](https://en.wikipedia.org/wiki/ISO_3166-1) country code for the chosen region (see [here](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements) for a complete list).
-
-The `<country>` code is optional and should only be added when it is needed. In other words, only when there is a valid reason to distinguish between a language (`ll`) and its regional dialects (`ll_CC1`, `ll_CC2`, etc.). For example, both `fr_FR` and `fr_BE` should fall under the same `pages.fr` directory since there virtually is no difference in writing between standard French and Belgian French.
+Translation of pages can be done by simply creating the corresponding page within the appropriate [language-specific directory](#directory-structure), creating that as well if it does not already exist.
 
 > [!IMPORTANT]  
 > When adding a new language to `tldr`, it is suggested to add it to the [translation templates](contributing-guides/translation-templates) along with any page additions.
+
+> [!TIP]
+> When fixing errors in an existing translation, it is suggested to update the page to match the latest version of the English page.
 
 To see the current progress of all translations, you can visit <https://lukwebsforge.github.io/tldri18n/>, which provides a dynamically updated table of all pages and their translations.
 
@@ -137,7 +195,7 @@ A list of translated templates for alias pages can be found [here](contributing-
 
 It is acceptable for several pages to get translated in one pull request.
 
-For more information about language specific rules, refer to the [style guide](contributing-guides/style-guide.md#language-specific-rules).
+For more information about language-specific rules, refer to the [style guide](contributing-guides/style-guide.md#language-specific-rules).
 
 ## Inclusive language
 
@@ -156,7 +214,7 @@ The latest version of [NodeJS](https://nodejs.org) is required to install `tldr-
 npm install --global tldr-lint
 ```
 
-Once its installed, you can test your page by running the following command:
+Once it is installed, you can test your page by running the following command:
 
 ```sh
 tldr-lint {{path/to/page.md}}
@@ -165,7 +223,8 @@ tldr-lint {{path/to/page.md}}
 Now, you are ready to submit a pull request!
 
 > [!TIP]
-> Additionally, inside the `tldr` directory you can install the dependencies using `npm install` command and now when you commit your changes, the tests will run automatically via the pre-commit hook.
+> Additionally, inside the `tldr` directory you can install the dependencies using the `npm install` command and now when you commit your changes, the tests will run automatically via the pre-commit hook.
+> (To skip the pre-commit hook and immediately commit your changes use the `git commit --no-verify` command).
 
 ### Submitting changes
 
@@ -178,21 +237,23 @@ Alternatively, you can do most of the process
 [using Git on the command-line](contributing-guides/git-terminal.md).
 
 > [!TIP]
-> After creating a pull request, it is suggested to enable the "Allow edits by maintainers" option (This only needs to be done once the first time you create a PR). It allows maintainers to make changes to your pull request and assist you in getting it merged.
+> After creating a pull request, it is suggested to enable the "Allow edits by maintainers" option (This only needs to be done once the first time you create a PR).
+> It allows maintainers to make changes to your pull request and assist you in getting it merged, in addition to facilitate the contribution to go on if you can no longer work on it soon for any reason.
 
 ### Accepting suggestions within a pull request
 
-The easiest way to apply suggested changes is to accept the suggestion made on your pull request. Refer to the [GitHub docs](https://docs.github.com/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/incorporating-feedback-in-your-pull-request) for more details.
+The easiest way to apply suggested changes is to accept the suggestion made on your pull request.
+Refer to the [GitHub docs](https://docs.github.com/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/incorporating-feedback-in-your-pull-request) for more details.
 
 To commit a suggestion to your pull request, click on `Commit suggestion`:
 
 ![Commit suggestion button in Github](./images/commit-suggestion-button.png)
 
-If you want to commit multiple suggestions, go to the "Files changed" tab and batch all suggestions. Now, click `Commit suggestions` button and enter a commit message to create a single commit.
+If you want to commit multiple suggestions, go to the "Files changed" tab and batch all suggestions. Now, click the `Commit suggestions` button and enter a commit message to create a single commit.
 
-### Commit message
+### Commit message and PR title
 
-For the commit message of page changes, use the following format:
+For the commit message and PR title of page changes, use the following format:
 
 `{{command}}: type of change`
 
@@ -202,13 +263,27 @@ Where `{{command}}` is the name of the command being modified, and `type of chan
 - For a page edit: `cat: fix typo`, `git-push: add --force example`
 - For a new translation of an existing page: `cp: add Tamil translation`
 - For a modification to the translation of an existing page: `cp: fix typo in Tamil translation`
-- For related changes to several pages: `grep, find, locate: synchronize format of wildcards`
+- For related changes to some pages: `grep, find, locate: synchronize format of wildcards`
+- For related changes to several unrelated pages: `pages*: fix Linux casing`
 - For multiple subcommand page additions: `git-{add, push, ...}: add page`
 - For modifying multiple pages in a language: `pages.<locale>/*: update pages`
 
----
+For script changes, the commit message and the PR title can be (but not limited to) one of the following examples:
 
-For other cases, its suggested to follow <https://www.conventionalcommits.org/> as much as possible.
+- For a new script addition: `scripts/{{script_name}}: add script`
+- For a script edit: `scripts/set-alias-page: fix performance issue`
+- For changes that affect multiple scripts: `scripts: replace insecure library`
+
+For other cases, it is suggested to follow <https://www.conventionalcommits.org/> as much as possible.
+
+## Name collisions
+
+When there are multiple commands sharing the same name, the existing page of the command and the new command can be renamed to `command.1` and so on following a numbering scheme or based on the programming language i.e. `command.js`.
+The base page can be updated to reference the newly renamed/created pages by following [this subcommand reference format](#subcommands).
+
+See the following page for reference:
+
+- [just](pages/common/just.md)
 
 ## Licensing
 

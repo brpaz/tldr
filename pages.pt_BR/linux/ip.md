@@ -2,7 +2,7 @@
 
 > Mostra / manipula roteamento, dispositivos, roteamento baseado em póliticas e túneis.
 > Alguns subcomandos como `ip address` têm suas pŕoprias documentações de uso.
-> Mais informações: <https://www.man7.org/linux/man-pages/man8/ip.8.html>.
+> Mais informações: <https://www.manned.org/ip.8>.
 
 - Lista interfaces com informações detalhadas:
 
@@ -26,7 +26,7 @@
 
 - Ativa / desativa uma interface:
 
-`ip link set {{interface}} up/down`
+`ip link set {{interface}} {{up|down}}`
 
 - Adiciona / remove um endereço de IP a uma interface:
 

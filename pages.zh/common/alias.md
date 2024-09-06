@@ -1,8 +1,12 @@
 # alias
 
-> 创建别名 -- 用给定的字符串指代特定的命令。
-> 别名只会在当前的 shell 会话中生效，除非它们在 shell 的配置文件中被定义，例如`~/.bashrc`.
+> 创建别名——用给定的字符串指代特定的命令。
+> 别名只会在当前的 shell 会话中生效，除非它们在 shell 的配置文件中被定义，例如`~/.bashrc`。
 > 更多信息：<https://tldp.org/LDP/abs/html/aliases.html>.
+
+- 列出所有别名：
+
+`alias`
 
 - 创建一个通用的别名：
 
@@ -16,14 +20,10 @@
 
 `unalias {{别名}}`
 
-- 列出所有的别名：
+- 将 `rm` 转换为交互式命令：
 
-`alias -p`
+`alias {{rm}}="{{rm --interactive}}"`
 
-- 将 rm 转换为交互式命令：
+- 创建别名 `la` 来指代 `ls --all`：
 
-`alias {{rm}}="{{rm -i}}"`
-
-- 创建别名 `la` 来指代 `ls -a`：
-
-`alias {{la}}="{{ls -a}}"`
+`alias {{la}}="{{ls --all}}"`

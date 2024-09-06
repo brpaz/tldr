@@ -1,7 +1,7 @@
 # date
 
 > Ustaw bądź wyświetl datę systemową.
-> Więcej informacji: <https://ss64.com/osx/date.html>.
+> Więcej informacji: <https://keith.github.io/xcode-man-pages/date.1.html>.
 
 - Wyświetl aktualną datę w domyślnym formacie:
 
@@ -17,4 +17,4 @@
 
 - Wyświetl określoną datę jako znacznik czasu Unix w domyślnym formacie:
 
-`date -r 1473305798`
+`date -r {{1473305798}}`

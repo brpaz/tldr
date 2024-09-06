@@ -1,7 +1,7 @@
 # date
 
 > Define ou exibe a data do sistema.
-> Mais informações: <https://ss64.com/osx/date.html>.
+> Mais informações: <https://keith.github.io/xcode-man-pages/date.1.html>.
 
 - Exibe a data atual usando o formato da localidade padrão:
 
@@ -17,4 +17,4 @@
 
 - Exibe uma data específica (representada como um timestamp Unix) usando o formato padrão:
 
-`date -r 1473305798`
+`date -r {{1473305798}}`

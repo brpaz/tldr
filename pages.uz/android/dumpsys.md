@@ -2,7 +2,7 @@
 
 > Android tizimi xizmatlari to'g'risida malumot berish.
 > Bu buyruq faqatgina `adb shell` bilan ishlatiladi.
-> Ko'proq malumot: <https://developer.android.com/studio/command-line/dumpsys>.
+> Ko'proq malumot: <https://developer.android.com/tools/dumpsys>.
 
 - Tizimning barcha xizmatlari haqida tahliliy malumot:
 
@@ -12,7 +12,7 @@
 
 `dumpsys {{service}}`
 
-- `dumpsys` buyrug'idagi barcha xizmatlarni chiqaradi:
+- Buyrug'idagi barcha xizmatlarni chiqaradi `dumpsys`:
 
 `dumpsys -l`
 

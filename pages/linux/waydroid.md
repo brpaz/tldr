@@ -1,6 +1,6 @@
 # waydroid
 
-> A container-based approach to boot a full Android system on a regular GNU/Linux system like Ubuntu.
+> A container-based approach to boot a full Android system on a regular Linux system like Ubuntu.
 > More information: <https://docs.waydro.id>.
 
 - Start Waydroid:
@@ -26,3 +26,7 @@
 - Manage the Waydroid container:
 
 `waydroid container {{start|stop|restart|freeze|unfreeze}}`
+
+- Adjust Waydroid window dimensions:
+
+`waydroid prop set persist.waydroid.{{width|height}} {{number}}`
