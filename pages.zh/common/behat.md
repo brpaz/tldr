@@ -1,7 +1,7 @@
 # behat
 
 > 基于 Behaviour-Driven Development 的自动化测试 PHP 框架。
-> 更多信息：<https://behat.org>.
+> 更多信息：<https://docs.behat.org/en/latest/user_guide/command_line_tool.html>。
 
 - 初始化一个 PHP behat 项目：
 
@@ -13,7 +13,7 @@
 
 - 运行指定组所有的测试用例：
 
-`behat --suite={{组名}}`
+`behat --suite {{组名}}`
 
 - 运行所有测试，指定输入格式：
 

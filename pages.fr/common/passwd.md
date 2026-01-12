@@ -1,6 +1,7 @@
 # passwd
 
 > Passwd est un outil de changement de mot de passe utilisateur.
+> Voir aussi : `chpasswd`.
 > Plus d'informations : <https://manned.org/passwd>.
 
 - Change le mot de passe de l'utilisateur actuel :
@@ -13,8 +14,8 @@
 
 - Affiche l'état actuel du compte utilisateur :
 
-`passwd -S`
+`passwd {{[-S|--status]}}`
 
 - Supprime le mot de passe de l'utilisateur (supprime l'authentification par mot de passe pour l'utilisateur indiqué) :
 
-`passwd -d`
+`passwd {{[-d|--delete]}}`

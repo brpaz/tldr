@@ -1,9 +1,7 @@
 # arch
 
-> Mostra il nome dell'architettura del sistema.
-> Vedi anche `uname`.
-> Maggiori informazioni: <https://www.gnu.org/software/coreutils/arch>.
+> Questo comando è un alias per `uname --machine`.
 
-- Mostra l'architettura del sistema:
+- Consulta la documentazione del comando originale:
 
-`arch`
+`tldr uname`

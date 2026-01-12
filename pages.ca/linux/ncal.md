@@ -1,8 +1,7 @@
 # ncal
 
 > Aquest comandament és un àlies de `cal`.
-> Més informació: <https://manned.org/ncal>.
 
-- Veure documentació per el comandament original:
+- Veure documentació pel comandament original:
 
 `tldr cal`

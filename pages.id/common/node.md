@@ -1,24 +1,28 @@
 # node
 
 > Platform JavaScript sisi server (Node.js).
-> Informasi lebih lanjut: <https://nodejs.org>.
+> Informasi lebih lanjut: <https://nodejs.org/docs/latest/api/cli.html#options>.
 
-- Menjalankan berkas JavaScript:
+- Jalankan berkas program JavaScript:
 
-`node {{alamat/ke/berkas}}`
+`node {{jalan/menuju/berkas}}`
 
-- Memulai sebuah REPL (shell interaktif):
+- Jalankan sebuah REPL (shell interaktif):
 
 `node`
 
-- Mengevaluasi kode JavaScript dengan memberikanya sebagai sebuah argument:
+- Jalankan berkas program dan jalankan ulang saat isi dari berkas tersebut terubah (membutuhkan Node.js versi 18.11+):
 
-`node -e "{{kode}}"`
+`node --watch {{jalan/menuju/file}}`
 
-- Mengevaluasi dan mencetak hasil, berguna untuk melihat versi dependesni node:
+- Evaluasi kode JavaScript dengan memberikanya sebagai sebuah argument:
 
-`node -p "{{process.versions}}"`
+`node {{[-e|--eval]}} "{{kode}}"`
 
-- Mengaktifkan inspector, menjeda eksekusi sampai debugger terhubung segera setelah kode sumber sepenuhnya terparser:
+- Evaluasi kode dan cetak hasil, berguna untuk melihat versi dependesni node:
 
-`node --no-lazy --inspect-brk {{alamat/ke/berkas}}`
+`node {{[-p|--print]}} "process.versions"`
+
+- Aktifkan inspector, yang akan menjeda eksekusi sampai debugger terhubung segera setelah kode sumber sepenuhnya terparser:
+
+`node --no-lazy --inspect-brk {{jalan/menuju/berkas}}`

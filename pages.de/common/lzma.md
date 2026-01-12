@@ -1,7 +1,6 @@
 # lzma
 
-> Dieser Befehl ist ein Alias von `xz`.
-> Weitere Informationen: <https://manned.org/lzma>.
+> Dieser Befehl ist ein Alias von `xz --format lzma`.
 
 - Zeige die Dokumentation für den originalen Befehl an:
 

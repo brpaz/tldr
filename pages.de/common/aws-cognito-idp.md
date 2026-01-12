@@ -1,7 +1,7 @@
 # aws cognito-idp
 
 > Verwalten des Amazon Cognito-Benutzerpools, seiner Benutzer und Gruppen mit der CLI.
-> Weitere Informationen: <https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cognito-idp/index.html>.
+> Weitere Informationen: <https://docs.aws.amazon.com/cli/latest/reference/cognito-idp/>.
 
 - Erstelle einen neuen Cognito-Benutzerpool:
 
@@ -23,6 +23,6 @@
 
 `aws cognito-idp list-users --user-pool-id {{benutzerpool_id}}`
 
-- Lösche einen  Benutzer aus einem bestimmten Pool:
+- Lösche einen Benutzer aus einem bestimmten Pool:
 
 `aws cognito-idp admin-delete-user --username {{benutzer}} --user-pool-id {{benutzerpool_id}}`

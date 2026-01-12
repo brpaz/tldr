@@ -1,8 +1,7 @@
 # lzcat
 
-> Este comando é um alias de `xz`.
-> Mais informações: <https://manned.org/lzcat>.
+> Este comando é um alias de `xz --format lzma --decompress --stdout`.
 
-- Exibe documentação do comando original:
+- Ver documentação do comando original:
 
 `tldr xz`

@@ -1,8 +1,7 @@
 # gnmic sub
 
-> 这是 `gnmic subscribe` 命令的一个别名。
-> 更多信息：<https://gnmic.kmrd.dev/cmd/subscribe>.
+> 此命令为 `gnmic subscribe` 的别名。
 
-- 原命令的文档在：
+- 查看原命令的文档：
 
 `tldr gnmic subscribe`

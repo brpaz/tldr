@@ -1,8 +1,7 @@
 # ubuntu-bug
 
-> Aquest commandament és un àlies de `apport-bug`.
-> Més informació: <https://manned.org/ubuntu-bug>.
+> Aquest comandament és un àlies de `apport-bug`.
 
-- Veure documentació per el commandament original:
+- Veure documentació pel comandament original:
 
 `tldr apport-bug`

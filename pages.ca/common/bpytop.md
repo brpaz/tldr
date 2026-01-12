@@ -1,7 +1,7 @@
 # bpytop
 
 > Mostra informació del sistema en temps real sobre processos executant-se, amb gràfics. Similar a `gtop` i `htop`.
-> Més informació: <https://github.com/aristocratos/bpytop>.
+> Més informació: <https://github.com/aristocratos/bpytop#command-line-options>.
 
 - Inicia bpytop:
 
@@ -11,18 +11,18 @@
 
 `bpytop -m`
 
-- Mostra la versió:
-
-`bpytop -v`
-
 - Canvia a mode minimalista:
 
-`m`
+`<m>`
 
 - Busca processos o programes executant-se:
 
-`f`
+`<f>`
 
 - Canvia ajustaments:
 
-`M`
+`<M>`
+
+- Mostra la versió:
+
+`bpytop -v`

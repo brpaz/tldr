@@ -1,7 +1,7 @@
 # a2disconf
 
 > Deaktiviert eine Apache-Konfigurationsdatei auf Debian-basierten Betriebssystemen.
-> Weitere Informationen: <https://manpages.debian.org/latest/apache2/a2disconf.8.en.html>.
+> Weitere Informationen: <https://manned.org/a2disconf>.
 
 - Deaktiviere eine Konfigurationsdatei:
 
@@ -9,4 +9,4 @@
 
 - Zeige keine Informationsnachrichten an:
 
-`sudo a2disconf --quiet {{konfigurationsdatei}}`
+`sudo a2disconf {{[-q|--quiet]}} {{konfigurationsdatei}}`

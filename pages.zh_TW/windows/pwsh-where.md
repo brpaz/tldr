@@ -1,8 +1,7 @@
 # pwsh where
 
-> 這是 `Where-Object` 命令的一個別名。
-> 更多資訊：<https://learn.microsoft.com/powershell/module/microsoft.powershell.core/where-object>.
+> 此命令為 `Where-Object` 的別名。
 
-- 原命令的文件在：
+- 檢視原命令的文件：
 
 `tldr Where-Object`

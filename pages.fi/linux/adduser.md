@@ -1,7 +1,7 @@
 # adduser
 
 > Käyttäjän lisäysapuohjelma.
-> Lisätietoja: <https://manpages.debian.org/latest/adduser/adduser.html>.
+> Lisätietoa: <https://manned.org/adduser>.
 
 - Luo uusi käyttäjä oletuskotihakemistolla ja pyydä käyttäjää asettamaan salasana:
 

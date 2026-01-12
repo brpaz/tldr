@@ -1,24 +1,28 @@
 # alacritty
 
 > Lintas platform, terakselerasi GPU terminal emulator.
-> Informasi lebih lanjut: <https://github.com/alacritty/alacritty>.
+> Informasi lebih lanjut: <https://manned.org/alacritty>.
 
-- Membuka jendela Alacritty baru:
+- Buka jendela Alacritty baru:
 
 `alacritty`
 
-- Menjalankan Alacritty pada direktori tertentu:
+- Jalankan Alacritty sebagai peladen daemon (tanpa membuat jendela baru):
 
-`alacritty --working-directory {{alamat/ke/direktori}}`
+`alacritty --daemon`
 
-- Menjalankan perintah di jendela Alacritty baru:
+- Buat jendela baru pada proses Alacritty yang sedang berjalan:
 
-`alacritty -e {{perintah}}`
+`alacritty msg create-window`
 
-- Menentukan berkas konfigurasi alternatif (nilai default `$XDG_CONFIG_HOME/alacritty/alacritty.toml`):
+- Jalankan Alacritty pada direktori tertentu (dapat juga bekerja dalam `alacritty msg create-window`):
 
-`alacritty --config-file {{alamat/ke/konfigurasi.toml}}`
+`alacritty --working-directory {{jalan/menuju/direktori}}`
 
-- Menjalankan dengan mengaktifkan pemuatan ulang konfigurasi secara langsung/otomatis (dapat juga diaktifkan secara default di `alacritty.toml`):
+- Jalankan perintah di jendela Alacritty baru (dapat juga bekerja dalam `alacritty msg create-window`):
 
-`alacritty --live-config-reload --config-file {{alamat/ke/konfigurasi.toml}}`
+`alacritty {{[-e|--command]}} {{perintah}}`
+
+- Gunakan berkas konfigurasi alternatif untuk memuat program (nilai default `$XDG_CONFIG_HOME/alacritty/alacritty.toml`):
+
+`alacritty --config-file {{jalan/menuju/konfigurasi.toml}}`

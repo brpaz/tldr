@@ -1,32 +1,37 @@
 # dnf
 
-> Administrador de paquetes para RHEL, CentOS y Fedora (Reemplaza a yum).
-> Más información: <https://dnf.readthedocs.io>.
+> Gestor de paquetes para Fedora 41+ y RHEL 10.
+> Vea los comandos equivalentes en otros gestores de paquetes en <https://wiki.archlinux.org/title/Pacman/Rosetta>.
+> Más información: <https://dnf5.readthedocs.io/en/latest/commands/index.html>.
 
-- Actualiza todos los paquetes a la última versión disponible:
+- Actualiza los paquetes instalados a las últimas versiones disponibles:
 
-`sudo dnf update`
+`sudo dnf {{[up|upgrade]}}`
 
-- Busca un paquete usando palabras clave:
+- Busca paquetes por palabras clave:
 
-`dnf search {{palabra_clave}}`
+`dnf {{[se|search]}} {{keyword1 keyword2 ...}}`
 
-- Muestra información acerca de un paquete:
+- Muestra detalles sobre un paquete:
 
-`dnf info {{paquete}}`
+`dnf {{[if|info]}} {{paquete}}`
 
-- Instala un nuevo paquete:
+- Instala nuevos paquetes (utilice `--assumeyes` para confirmar automáticamente todas las solicitudes):
 
-`sudo dnf install {{paquete}}`
+`sudo dnf {{[in|install]}} {{paquete1 paquete2 ...}}`
 
-- Instala un nuevo paquete respondiendo sí a todas las preguntas:
+- Elimina paquetes:
 
-`sudo dnf install -y {{paquete}}`
+`sudo dnf {{[rm|remove]}} {{paquete1 paquete2 ...}}`
 
-- Lista todos los paquetes instalados:
+- Muestra una lista de los paquetes instalados:
 
-`dnf list --installed`
+`dnf {{[ls|list]}} --installed`
 
-- Encuentra qué paquete provee un archivo determinado:
+- Busca qué paquetes proporcionan un comando determinado:
 
-`dnf provides {{archivo}}`
+`dnf provides {{comando}}`
+
+- Limpia los datos almacenados en caché:
+
+`sudo dnf clean {{all|dbcache|expire-cache|metadata|packages}}`

@@ -1,8 +1,7 @@
 # unxz
 
-> Este comando é um apelido de `xz`.
-> Mais informações: <https://manned.org/unxz>.
+> Este comando é um apelido de `xz --decompress`.
 
-- Exibe documentação sobre o comando original:
+- Veja documentação sobre o comando original:
 
 `tldr xz`

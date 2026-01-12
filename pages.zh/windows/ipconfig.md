@@ -1,7 +1,7 @@
 # ipconfig
 
 > 显示和管理 Windows 的网络配置。
-> 更多信息：<https://learn.microsoft.com/windows-server/administration/windows-commands/ipconfig>.
+> 更多信息：<https://learn.microsoft.com/windows-server/administration/windows-commands/ipconfig>。
 
 - 显示网络适配器列表：
 
@@ -19,6 +19,10 @@
 
 `ipconfig /release {{适配器}}`
 
-- 清除所有 DNS 缓存：
+- 显示所有本地 DNS 缓存：
+
+`ipconfig /displaydns`
+
+- 清除所有本地 DNS 缓存：
 
 `ipconfig /flushdns`

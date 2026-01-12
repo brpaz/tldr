@@ -1,24 +1,28 @@
 # alacritty
 
-> Emulador de terminal acelerado por GPU y multiplataforma.
-> Más información: <https://github.com/alacritty/alacritty>.
+> Emulador de terminal multiplataforma acelerado por GPU.
+> Más información: <https://manned.org/alacritty>.
 
-- Abre una nueva ventana de Alacritty:
+- Inicia un nuevo proceso Alacritty y crea una ventana:
 
 `alacritty`
 
-- Ejecuta Alacritty en un directorio específico:
+- Inicia el programa residente de Alacritty (sin crear una ventana):
+
+`alacritty --daemon`
+
+- Crea una nueva ventana utilizando el proceso Alacritty ya en ejecución:
+
+`alacritty msg create-window`
+
+- Inicia el intérprete de comandos en un directorio específico (también funciona con `alacritty msg create-window`):
 
 `alacritty --working-directory {{ruta/al/directorio}}`
 
-- Ejecuta un comando en una nueva ventana de Alacritty:
+- [e]jecuta un comando en una nueva ventana de Alacritty (también funciona con `alacritty msg create-window`):
 
-`alacritty -e {{comando}}`
+`alacritty {{[-e|--command]}} {{comando}}`
 
-- Especifica un archivo de configuración alternativo (por defecto es `$XDG_CONFIG_HOME/alacritty/alacritty.toml`):
+- Utiliza un archivo de configuración alternativo (por defecto es `$XDG_CONFIG_HOME/alacritty/alacritty.toml`):
 
-`alacritty --config-file {{ruta/al/config.toml}}`
-
-- Ejecuta con recarga automática de la configuración activada (puede activarse por defecto en `alacritty.toml`):
-
-`alacritty --live-config-reload --config-file {{ruta/al/config.toml}}`
+`alacritty --config-file {{ruta/a/config.toml}}`

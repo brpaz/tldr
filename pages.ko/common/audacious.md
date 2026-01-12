@@ -1,11 +1,16 @@
 # audacious
 
 > 오픈 소스 오디오 플레이어.
-> 더 많은 정보: <https://audacious-media-player.org>.
+> 같이 보기: `audtool`, `clementine`, `mpc`, `ncmpcpp`.
+> 더 많은 정보: <https://manned.org/audacious>.
 
 - 프로그램 실행:
 
 `audacious`
+
+- 새로운 인스턴스를 시작하고 오디오를 재생:
+
+`audacious --new-instance {{경로/대상/오디오}}`
 
 - 오디오 파일의 특정 디렉터리를 대기열에 삽입:
 

@@ -1,7 +1,6 @@
 # lzma
 
-> Perintah ini merupakan alias dari `xz`.
-> Informasi lebih lanjut: <https://manned.org/lzma>.
+> Perintah ini merupakan alias dari `xz --format lzma`.
 
 - Tampilkan dokumentasi untuk perintah asli:
 

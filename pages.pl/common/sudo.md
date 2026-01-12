@@ -1,6 +1,7 @@
 # sudo
 
 > Wykonuje pojedyncze polecenie jako superuser lub inny użytkownik.
+> Zobacz także: `pkexec`, `run0`, `doas`.
 > Więcej informacji: <https://www.sudo.ws/sudo.html>.
 
 - Uruchom polecenie jako superuser:
@@ -9,11 +10,11 @@
 
 - Edytuj plik jako superuser w domyślnym edytorze:
 
-`sudo -e {{/etc/fstab}}`
+`sudo {{[-e|--edit]}} {{/etc/fstab}}`
 
 - Uruchom polecenie jako inny użytkownik i/lub grupa:
 
-`sudo -u {{uzytkownik}} -g {{grupa}} {{id -a}}`
+`sudo {{[-u|--user]}} {{uzytkownik}} {{[-g|--group]}} {{grupa}} {{id -a}}`
 
 - Powtórz ostatnie polecenie poprzedzone `sudo` (tylko w Bash, Zsh, etc.):
 
@@ -21,4 +22,4 @@
 
 - Uruchom domyślną powłokę z uprawnieniami superuser:
 
-`sudo -i`
+`sudo {{[-i|--login]}}`

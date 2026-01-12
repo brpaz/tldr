@@ -1,8 +1,7 @@
 # unlzma
 
-> Este comando é um alias de `xz`.
-> Mais informações: <https://manned.org/unlzma>.
+> Este comando é um alias de `xz --format lzma --decompress`.
 
-- Exibe documentação do comando original:
+- Ver documentação do comando original:
 
 `tldr xz`

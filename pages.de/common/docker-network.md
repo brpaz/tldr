@@ -1,7 +1,7 @@
 # docker network
 
 > Erzeuge und verwalte Docker Netzwerke.
-> Weitere Informationen: <https://docs.docker.com/engine/reference/commandline/network/>.
+> Weitere Informationen: <https://docs.docker.com/reference/cli/docker/network/>.
 
 - Liste alle verfügbaren und konfigurierten Docker Netzwerke auf:
 
@@ -9,7 +9,7 @@
 
 - Erzeuge ein benutzerdefiniertes Netzwerk:
 
-`docker network create --driver {{treiber_name}} {{netzwerk_name}}`
+`docker network create {{[-d|--driver]}} {{treiber_name}} {{netzwerk_name}}`
 
 - Zeige detaillierte Informationen der mit Leerzeichen separierten Netzwerke an:
 

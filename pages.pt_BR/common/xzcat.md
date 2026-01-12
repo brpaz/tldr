@@ -1,8 +1,7 @@
 # xzcat
 
-> Este comando é um apelido de `xz`.
-> Mais informações: <https://manned.org/xzcat>.
+> Este comando é um apelido de `xz --decompress --stdout`.
 
-- Exibe documentação sobre o comando original:
+- Veja documentação sobre o comando original:
 
 `tldr xz`

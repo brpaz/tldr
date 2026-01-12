@@ -1,7 +1,6 @@
 # xzcat
 
-> Questo comando è un alias per `xz`.
-> Maggiori informazioni: <https://manned.org/xzcat>.
+> Questo comando è un alias per `xz --decompress --stdout`.
 
 - Consulta la documentazione del comando originale:
 

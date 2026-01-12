@@ -1,7 +1,7 @@
 # apk
 
 > Gestore pacchetti di Alpine Linux.
-> Maggiori informazioni: <https://wiki.alpinelinux.org/wiki/Alpine_Linux_package_management>.
+> Maggiori informazioni: <https://wiki.alpinelinux.org/wiki/Alpine_Package_Keeper>.
 
 - Aggiorna gli indici di tutti i repository remoti:
 

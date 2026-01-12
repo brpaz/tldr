@@ -1,7 +1,6 @@
 # lzcat
 
-> Perintah ini merupakan alias dari `xz`.
-> Informasi lebih lanjut: <https://manned.org/lzcat>.
+> Perintah ini merupakan alias dari `xz --format lzma --decompress --stdout`.
 
 - Tampilkan dokumentasi untuk perintah asli:
 

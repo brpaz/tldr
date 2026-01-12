@@ -1,28 +1,25 @@
 # age
 
 > Una herramienta de encriptación de archivos sencilla, moderna y segura.
-> Más información: <https://github.com/FiloSottile/age>.
+> Vea también: `age-keygen`.
+> Más información: <https://github.com/FiloSottile/age#usage>.
 
 - Genera un archivo cifrado que se puede descifrar con una frase de contraseña:
 
-`age --passphrase --output {{ruta/al/archivo_encriptado}} {{ruta/al/archivo_no_encriptado}}`
+`age {{[-p|--passphrase]}} {{[-o|--output]}} {{ruta/al/archivo_encriptado}} {{ruta/al/archivo_no_cifrado}}`
 
-- Genera un par de claves, guardando la clave privada en un archivo no cifrado e imprimiendo la clave pública en `stdout`:
+- Cifra un archivo con una o varias claves públicas introducidas como literales (repite el indicador `--recipient` para especificar varias claves públicas):
 
-`age-keygen --output {{ruta/al/archivo}}`
+`age {{[-r|--recipient]}} {{clave_publica}} {{[-o|--output]}} {{ruta/al/archivo_cifrado}} {{ruta/al/archivo_no_cifrado}}`
 
-- Cifra un archivo con una o más claves públicas que se introducen como literales:
+- Cifra un archivo a uno o más destinatarios con sus claves públicas especificadas en un archivo (una por línea):
 
-`age --recipient {{clave_publica_1}} --recipient {{clave_publica_2}} {{ruta/al/archivo_sin_cifrar}} --output {{ruta/al/archivo_cifrado}}`
-
-- Cifra un archivo con una o varias claves públicas especificadas en un archivo de destinatarios:
-
-`age --recipients-file {{ruta/al/archivo_recipientes}} {{ruta/para/archivo_sin_cifrar}} --output {{ruta/al/archivo_encriptado}}`
+`age {{[-R|--recipients-file]}} {{ruta/al/archivo_recipientes}} {{[-o|--output]}} {{ruta/al/archivo_encriptado}} {{ruta/al/archivo_no_cifrado}}`
 
 - Descifra un archivo con una frase de contraseña:
 
-`age --decrypt --output {{ruta/al/archivo_descifrado}} {{ruta/para/archivo_cifrado}}`
+`age {{[-d|--decrypt]}} {{[-o|--output]}} {{ruta/al/archivo_descifrado}} {{ruta/para/archivo_cifrado}}`
 
 - Descifra un archivo con un archivo de clave privada:
 
-`age --decrypt --identity {{ruta/al/archivo_de_clave_privada}} --output {{ruta/para/archivo_descifrado}} {{ruta/para/archivo_cifrado}}`
+`age {{[-d|--decrypt]}} {{[-i|--identity]}} {{ruta/al/archivo_de_clave_privada}} {{[-o|--output]}} {{ruta/para/archivo_descifrado}} {{ruta/al/archivo_cifrado}}`

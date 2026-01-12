@@ -1,7 +1,8 @@
 # rmdir
 
 > निर्देशिका को हटाता है।
-> अधिक जानकारी: <https://www.gnu.org/software/coreutils/rmdir>।
+> यह भी देखें: `rm`।
+> अधिक जानकारी: <https://www.gnu.org/software/coreutils/manual/html_node/rmdir-invocation.html>।
 
 - निर्देशिका निकालें, बशर्ते वह खाली हो। गैर-रिक्त निर्देशिकाओं को हटाने के लिए `rm -r` का उपयोग करें:
 

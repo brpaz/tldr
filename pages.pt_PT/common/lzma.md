@@ -1,8 +1,7 @@
 # lzma
 
-> Este comando é um alias de `xz`.
-> Mais informações: <https://manned.org/lzma>.
+> Este comando é um alias de `xz --format lzma`.
 
-- Exibe documentação do comando original:
+- Ver documentação do comando original:
 
 `tldr xz`

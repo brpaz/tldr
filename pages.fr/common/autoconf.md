@@ -1,7 +1,7 @@
 # autoconf
 
 > Génère des scripts de configuration pour configurer automatiquement les paquets du code source.
-> Plus d'informations : <https://www.gnu.org/software/autoconf>.
+> Plus d'informations : <https://manned.org/autoconf>.
 
 - Génère un script de configuration depuis `configure.ac` (si présent) ou `configure.in` et le sauvegarde dans `configure` :
 
@@ -13,4 +13,4 @@
 
 - Génère un script de configuration depuis un modèle spécifié (même si the fichier d'entrée n'a pas changé) et l'écrit dans un fichier :
 
-`autoconf --force --output={{fichier_de_sortie}} {{fichier_de_template}}`
+`autoconf --force --output {{fichier_de_sortie}} {{fichier_de_template}}`

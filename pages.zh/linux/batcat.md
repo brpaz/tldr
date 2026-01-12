@@ -1,8 +1,7 @@
 # batcat
 
-> 这是 `bat` 命令的一个别名。
-> 更多信息：<https://github.com/sharkdp/bat>.
+> 此命令为 `bat` 的别名。
 
-- 原命令的文档在：
+- 查看原命令的文档：
 
 `tldr bat`

@@ -1,6 +1,6 @@
 # cal
 
-> Exibe as informações do calendário, destacando o dia atual.
+> Exibe um calendário com o dia atual destacado.
 > Mais informações: <https://manned.org/cal>.
 
 - Exibe o calendário do mês atual:
@@ -9,11 +9,19 @@
 
 - Exibe o calendário do meses anterior, atual e seguinte:
 
-`cal -3`
+`cal {{[-3|--three]}}`
+
+- Mostra o calendário completo para o ano atual:
+
+`cal {{[-y|--year]}}`
+
+- Mostra os próximos doze meses:
+
+`cal {{[-Y|--twelve]}}`
 
 - Utiliza segunda-feira como o primeiro dia da semana:
 
-`cal --monday`
+`cal {{[-m|--monday]}}`
 
 - Exibe o calendário de um ano específico (4 dígitos):
 

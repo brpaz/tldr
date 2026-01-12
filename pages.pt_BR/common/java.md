@@ -1,7 +1,7 @@
 # java
 
 > Inicializador de programas Java.
-> Mais informações: <https://docs.oracle.com/en/java/javase/20/docs/specs/man/java.html>.
+> Mais informações: <https://docs.oracle.com/en/java/javase/25/docs/specs/man/java.html>.
 
 - Executa um arquivo Java `.class` que contém um método main, usando o nome da classe:
 
@@ -19,10 +19,10 @@
 
 `java -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=*:5005 -jar {{nome_do_arquivo.jar}}`
 
-- Exiba a versão do JDK, JRE e HotSpot:
+- Exibe a versão do JDK, JRE e HotSpot:
 
 `java -version`
 
-- Exiba os comandos disponíveis do Java:
+- Exibe os comandos disponíveis do Java:
 
 `java -help`

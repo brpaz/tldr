@@ -2,7 +2,7 @@
 
 > La CLI officielle pour Amazon Web Services.
 > Certaines commandes comme `aws s3` ont leur propre documentation.
-> Plus d'informations : <https://aws.amazon.com/cli>.
+> Plus d'informations : <https://docs.aws.amazon.com/cli/latest/reference/>.
 
 - Configure la ligne de commande AWS :
 
@@ -11,10 +11,6 @@
 - Configure la ligne de commande AWS en utilisant le SSO :
 
 `aws configure sso`
-
-- Voir l'aide pour une commande AWS :
-
-`aws {{commande}} help`
 
 - Récupère l'identité de l'appelant (utilisé pour débogguer les permissions) :
 
@@ -35,3 +31,7 @@
 - Génère un squelette CLI en JSON (utile pour l'Infrastructure as Code) :
 
 `aws dynamodb update-table --generate-cli-skeleton`
+
+- Voir l'aide pour une commande AWS :
+
+`aws {{commande}} help`

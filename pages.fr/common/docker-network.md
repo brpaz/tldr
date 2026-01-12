@@ -1,7 +1,7 @@
 # docker network
 
 > Créer et gérer des réseaux Docker.
-> Plus d'informations : <https://docs.docker.com/engine/reference/commandline/network/>.
+> Plus d'informations : <https://docs.docker.com/reference/cli/docker/network/>.
 
 - Lister tous les réseaux disponible et configuré du service Docker :
 
@@ -9,13 +9,13 @@
 
 - Créer un réseau défini par l'utilisateur :
 
-`docker network create --driver {{nom_du_driver}} {{nom_du_reseau}}`
+`docker network create {{[-d|--driver]}} {{nom_du_driver}} {{nom_du_reseau}}`
 
 - Afficher les informations détaillées des réseaux séparés par des espaces :
 
 `docker network inspect {{nom_du_reseau}}`
 
-- Connecter un conteneur à un réseau en utilisant un nom  ou  un ID :
+- Connecter un conteneur à un réseau en utilisant un nom ou un ID :
 
 `docker network connect {{nom_du_reseau}} {{nom_du_conteneur|ID}}`
 

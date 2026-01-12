@@ -1,8 +1,8 @@
 # catimg
 
 > چاپ عکس در ترمینال.
-> موارد مشابه: `pixterm`, `chafa`.
-> اطلاعات بیشتر: <https://github.com/posva/catimg>.
+> همچنین : `pixterm`, `chafa`.
+> اطلاعات بیشتر: <https://manned.org/catimg>.
 
 - چاپ یک JPEG, PNG, یا GIF در ترمینال:
 

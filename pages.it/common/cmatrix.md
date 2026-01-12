@@ -1,7 +1,8 @@
 # cmatrix
 
 > Genera lettere che cadono, come in Matrix.
-> Maggiori informazioni: <https://github.com/abishekvashok/cmatrix>.
+> Vedi anche: `cbonsai`, `asciiquarium`, `pipes.sh`.
+> Maggiori informazioni: <https://manned.org/cmatrix>.
 
 - Attivare lo scorrimento asincrono:
 
@@ -15,6 +16,6 @@
 
 `cmatrix -r`
 
-- Imposta il dilazione di aggiornamento a 2 centisecondi (20 millisecondi):
+- Imposta il dilazione di aggiornamento a 100 centisecondi (10 secondi):
 
-`cmatrix -u {{2}}`
+`cmatrix -u 100`

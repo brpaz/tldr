@@ -1,8 +1,8 @@
 # docker image
 
 > Verwalte Docker Images.
-> Siehe auch `docker build`, `docker import` und `docker pull`.
-> Weitere Informationen: <https://docs.docker.com/engine/reference/commandline/image/>.
+> Siehe auch: `docker build`, `docker image pull`, `docker image rm`.
+> Weitere Informationen: <https://docs.docker.com/reference/cli/docker/image/>.
 
 - Liste lokale Docker Images auf:
 

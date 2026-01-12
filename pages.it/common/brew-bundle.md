@@ -1,7 +1,7 @@
 # brew bundle
 
 > Bundler per Homebrew, Homebrew Cask e per il Mac App Store.
-> Maggiori informazioni: <https://github.com/Homebrew/homebrew-bundle>.
+> Maggiori informazioni: <https://docs.brew.sh/Manpage#bundle-subcommand>.
 
 - Installa un pacchetto da un Brewfile nel percorso corrente:
 
@@ -9,7 +9,7 @@
 
 - Installa pacchetti da un Brewfile specifico in un percorso specifico:
 
-`brew bundle --file={{percorso/del/file}}`
+`brew bundle --file {{percorso/del/file}}`
 
 - Crea un Brewfile con tutti i pacchetti installati:
 

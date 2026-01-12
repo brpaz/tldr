@@ -13,17 +13,17 @@
 
 - Crea un file bundle degli ultimi 5 commit sul ramo corrente:
 
-`git bundle create {{percorso/del/file.bundle}} -{{5}} {{HEAD}}`
+`git bundle create {{percorso/del/file.bundle}} -5 {{HEAD}}`
 
 - Crea un file bundle degli ultimi 7 giorni:
 
-`git bundle create {{percorso/del/file.bundle}} --since={{7.days}} {{HEAD}}`
+`git bundle create {{percorso/del/file.bundle}} --since=7.days {{HEAD}}`
 
 - Verifica che un file bundle sia valido e possa essere applicato al repository in uso:
 
 `git bundle verify {{percorso/del/file.bundle}}`
 
-- Stampa su standard output la lista di riferimenti contenuti in un bundle:
+- Stampa su `stdout` la lista di riferimenti contenuti in un bundle:
 
 `git bundle unbundle {{percorso/del/file.bundle}}`
 

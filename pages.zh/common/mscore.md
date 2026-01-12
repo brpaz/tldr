@@ -1,8 +1,7 @@
 # mscore
 
-> 这是 `musescore` 命令的一个别名。
-> 更多信息：<https://musescore.org/handbook/command-line-options>.
+> 此命令为 `musescore` 的别名。
 
-- 原命令的文档在：
+- 查看原命令的文档：
 
 `tldr musescore`

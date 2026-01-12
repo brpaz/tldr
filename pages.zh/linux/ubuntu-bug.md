@@ -1,8 +1,7 @@
 # ubuntu-bug
 
-> 这是 `apport-bug` 命令的一个别名。
-> 更多信息：<https://manned.org/ubuntu-bug>.
+> 此命令为 `apport-bug` 的别名。
 
-- 原命令的文档在：
+- 查看原命令的文档：
 
 `tldr apport-bug`

@@ -1,8 +1,9 @@
 # nmtui
 
 > Interfaccia utente solo testo per NetworkManager.
-> Usa le frecce e invio per navigare.
-> Maggiori informazioni: <https://networkmanager.dev/docs/api/latest/nmtui.html>.
+> Usa `<ArrowKeys>` e `<Enter>` per navigare.
+> Vedi anche: `nmcli`.
+> Maggiori informazioni: <https://networkmanager.pages.freedesktop.org/NetworkManager/NetworkManager/nmtui.html>.
 
 - Apri interfaccia utente:
 

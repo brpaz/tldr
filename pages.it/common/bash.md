@@ -1,8 +1,8 @@
 # bash
 
-> Bourne-Again SHell.
-> Interprete da linea di comando compatibile con `sh`.
-> Maggiori informazioni: <https://www.gnu.org/software/bash/>.
+> Bourne-Again SHell, interprete da linea di comando compatibile con `sh`.
+> Vedi anche: `zsh`, `!`.
+> Maggiori informazioni: <https://www.gnu.org/software/bash/manual/bash.html#Invoking-Bash>.
 
 - Avvia una shell interattiva:
 
@@ -20,7 +20,7 @@
 
 `bash -x {{file.sh}}`
 
-- Esegui comandi da standard input:
+- Esegui comandi da `stdin`:
 
 `bash -s`
 

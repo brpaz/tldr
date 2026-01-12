@@ -1,7 +1,7 @@
 # apt-file
 
 > Cari kumpulan berkas di dalam paket `apt`, termasuk yang belum dipasang.
-> Informasi lebih lanjut: <https://manpages.debian.org/latest/apt-file/apt-file.1.html>.
+> Informasi lebih lanjut: <https://manned.org/apt-file.1>.
 
 - Perbarui basis data metadata:
 
@@ -17,4 +17,4 @@
 
 - Cari paket yang sesuai dengan `ekspresi_reguler`:
 
-`apt-file {{search|find}} --regexp {{ekspresi_reguler}}`
+`apt-file {{search|find}} {{[-x|--regexp]}} {{ekspresi_reguler}}`

@@ -1,7 +1,7 @@
 # docker network
 
 > Docker ağları oluştur ve yönet.
-> Daha fazla bilgi için: <https://docs.docker.com/engine/reference/commandline/network/>.
+> Daha fazla bilgi için: <https://docs.docker.com/reference/cli/docker/network/>.
 
 - docker daemon'daki tüm müsait ve düzenlenmiş ağları sırala:
 
@@ -9,7 +9,7 @@
 
 - Kullanıcı tarafından belirtilmiş bir ağ oluştur:
 
-`docker network create --driver {{driver_name}} {{ağ_ismi}}`
+`docker network create {{[-d|--driver]}} {{driver_name}} {{ağ_ismi}}`
 
 - Boşluk ile ayrılmış bir ağ listesinin detaylı bilgisini görüntüle:
 

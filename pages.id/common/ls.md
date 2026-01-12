@@ -1,32 +1,36 @@
 # ls
 
-> Menampilkan daftar konten pada direktori.
-> Informasi lebih lanjut: <https://www.gnu.org/software/coreutils/ls>.
+> Tampilkan daftar konten pada direktori.
+> Informasi lebih lanjut: <https://www.gnu.org/software/coreutils/manual/html_node/ls-invocation.html>.
 
-- Menampilkan daftar berkas dengan satu item tiap baris:
+- Tampilkan daftar isi berkas dengan satu item tiap baris:
 
 `ls -1`
 
-- Menampilkan daftar semua berkas, termasuk berkas tersembunyi:
+- Tampilkan daftar isi semua berkas, termasuk berkas tersembunyi:
 
-`ls -a`
+`ls {{[-a|--all]}}`
 
-- Menampilkan daftar semua berkas, dengan akhiran `/` ditambahkan ke nama direktori:
+- Tampilkan daftar isi semua berkas, dengan akhiran `/` ditambahkan ke nama direktori:
 
-`ls -F`
+`ls {{[-F|--classify]}}`
 
-- Menampilkan daftar berformat panjang (menampilkan izin, kepemilikan, ukuran dan waktu modifikasi pada setiap berkas):
+- Tampilkan daftar isi berformat panjang (menampilkan izin, kepemilikan, ukuran dan waktu modifikasi pada setiap berkas):
 
-`ls -la`
+`ls {{[-la|-l --all]}}`
 
-- Menampilkan daftar berformat panjang dan ukuran ditampilkan menggunakan unit yang mudah dibaca manusia (KiB, MiB, GiB):
+- Tampilkan daftar isi berformat panjang dan ukuran ditampilkan menggunakan unit yang mudah dibaca manusia (KiB, MiB, GiB):
 
-`ls -lh`
+`ls {{[-lh|-l --human-readable]}}`
 
-- Menampilkan daftar berformat panjang dan diurutkan berdasarkan ukuran (menurun):
+- Tampilkan daftar isi seluruh berkas secara rekursif, berformat panjang dan diurutkan berdasarkan ukuran (menurun):
 
-`ls -lS`
+`ls {{[-lSR|-lS --recursive]}}`
 
-- Menampilkan daftar berformat panjang dari semua berkas dan diurutkan berdasarkan tanggal modifikasi (terlama dulu):
+- Tampilkan daftar isi berformat panjang dari semua berkas dan diurutkan berdasarkan tanggal modifikasi (terlama dulu):
 
-`ls -ltr`
+`ls {{[-ltr|-lt --reverse]}}`
+
+- Hanya tampilkan daftar [d]irektori:
+
+`ls {{[-d|--directory]}} */`

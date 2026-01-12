@@ -1,7 +1,7 @@
 # gedit
 
 > Editor de texto del proyecto GNOME.
-> Más información: <https://help.gnome.org/users/gedit/stable/>.
+> Más información: <https://manned.org/gedit>.
 
 - Abre un archivo de texto:
 
@@ -13,7 +13,7 @@
 
 - Abre un archivo de texto con una codificación específica:
 
-`gedit --encoding={{UTF-8}} {{ruta/al/archivo}}`
+`gedit --encoding {{UTF-8}} {{ruta/al/archivo}}`
 
 - Muestra una lista de las codificaciones disponibles:
 

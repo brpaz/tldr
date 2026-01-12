@@ -1,7 +1,7 @@
 # choco upgrade
 
 > चॉकलेटी के साथ एक या अधिक पैकेज अपग्रेड करें।
-> अधिक जानकारी: <https://chocolatey.org/docs/commands-upgrade>।
+> अधिक जानकारी: <https://docs.chocolatey.org/en-us/choco/commands/upgrade/>।
 
 - एक या अधिक स्थान-पृथक पैकेजों को अपग्रेड करें:
 
@@ -29,4 +29,4 @@
 
 - प्रमाणीकरण के लिए उपयोगकर्ता नाम और पासवर्ड प्रदान करें:
 
-`choco upgrade {{पैकेज}} --user {{उपयोगकर्ता नाम}} --password {{पासवर्ड}}`
+`choco upgrade {{पैकेज}} --user {{उपयोगकर्ता_नाम}} --password {{पासवर्ड}}`

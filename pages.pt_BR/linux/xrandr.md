@@ -5,7 +5,7 @@
 
 - Exibe o estado atual do sistema (telas conhecidas, resoluções, ...):
 
-`xrandr --query`
+`xrandr {{[-q|--query]}}`
 
 - Desativa saídas desconectadas e ativa as conectadas com as configurações padrão:
 
@@ -26,3 +26,7 @@
 - Define o brilho de LVDS1 como 50%:
 
 `xrandr --output {{LVDS1}} --brightness {{0.5}}`
+
+- Mostra o estado atual de qualquer servidor X:
+
+`xrandr {{[-d|--display]}} :{{0}} {{[-q|--query]}}`

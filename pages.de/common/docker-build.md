@@ -1,7 +1,7 @@
 # docker build
 
 > Baut ein Image aus einem Dockerfile.
-> Weitere Informationen: <https://docs.docker.com/engine/reference/commandline/build/>.
+> Weitere Informationen: <https://docs.docker.com/reference/cli/docker/buildx/build/>.
 
 - Baue ein Docker Image aus dem Dockerfile im aktuellen Verzeichnis:
 
@@ -13,19 +13,19 @@
 
 - Baue ein Docker Image und gib ihm einen Tag:
 
-`docker build --tag {{name:tag}} .`
+`docker build {{[-t|--tag]}} {{name:tag}} .`
 
 - Baue ein Docker Image ohne Build-Kontext:
 
-`docker build --tag {{name:tag}} - < {{Dockerfile}}`
+`docker build {{[-t|--tag]}} {{name:tag}} - < {{Dockerfile}}`
 
 - Verwende keinen Cache beim Bauen des Docker Images:
 
-`docker build --no-cache --tag {{name:tag}} .`
+`docker build --no-cache {{[-t|--tag]}} {{name:tag}} .`
 
 - Baue ein Docker Image mit einem spezifischen Dockerfile:
 
-`docker build --file {{Dockerfile}} .`
+`docker build {{[-f|--file]}} {{Dockerfile}} .`
 
 - Baue mit benutzerdefinierten Variablen, die während des Bauens zur Verfügung stehen:
 

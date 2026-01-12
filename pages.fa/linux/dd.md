@@ -1,7 +1,8 @@
 # dd
 
 > تبدیل و کپی یک فایل.
-> اطلاعات بیشتر: <https://www.gnu.org/software/coreutils/dd>.
+> همچنین : `caligula`.
+> اطلاعات بیشتر: <https://www.gnu.org/software/coreutils/manual/html_node/dd-invocation.html>.
 
 - ساخت یک درایو USB قابل بوت از یک فایل iso (مثل `archlinux-xxx.iso`) و نمایش پیشرفت:
 

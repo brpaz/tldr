@@ -1,8 +1,8 @@
 # aws
 
 > アマゾンウェブサービスの公式 CLI ツールです。
-> `aws S3` のようないくつかのサブコマンドには、使用方法についての独自のドキュメントがあります。
-> 詳しくはこちら: <https://aws.amazon.com/cli>
+> `s3` のようないくつかのサブコマンドには、使用方法についての独自のドキュメントがあります。
+> もっと詳しく: <https://docs.aws.amazon.com/cli/latest/reference/>。
 
 - AWS コマンドラインを設定する:
 
@@ -11,10 +11,6 @@
 - SSO を利用して AWS コマンドラインを設定する:
 
 `aws configure sso`
-
-- AWS コマンドのヘルプを参照する:
-
-`aws {{コマンド}} help`
 
 - 操作呼び出しに使用した認証情報の取得（パーミッションのトラブルシューティングに使用します）:
 
@@ -35,3 +31,7 @@
 - JSON CLI スケルトンを生成する（Infrastructure as Code に役立ちます）:
 
 `aws dynamodb update-table --generate-cli-skeleton`
+
+- AWS コマンドのヘルプを参照する:
+
+`aws {{コマンド}} help`

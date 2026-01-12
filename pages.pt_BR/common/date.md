@@ -1,7 +1,7 @@
 # date
 
 > Define ou exibe a data do sistema.
-> Mais informações: <https://www.gnu.org/software/coreutils/date>.
+> Mais informações: <https://www.gnu.org/software/coreutils/manual/html_node/date-invocation.html>.
 
 - Exibe a data atual usando o formato padrão de localidade:
 
@@ -9,7 +9,7 @@
 
 - Exibe a data atual em UTC, usando o formato ISO 8601:
 
-`date -u +%Y-%m-%dT%H:%M:%S%Z`
+`date {{[-u|--utc]}} +%Y-%m-%dT%H:%M:%S%Z`
 
 - Exibe a data atual em Unix timestamp - segundos desde 00:00:00 UTC de 1 de janeiro de 1970 (Unix epoch):
 
@@ -17,11 +17,11 @@
 
 - Converte uma data especificada como Unix timestamp para o formato padrão:
 
-`date -d @{{1473305798}}`
+`date {{[-d|--date]}} @{{1473305798}}`
 
 - Converte uma determinada data pra Unix timestamp:
 
-`date -d "{{2018-09-01 00:00}}" +%s --utc`
+`date {{[-d|--date]}} "{{2018-09-01 00:00}}" +%s {{[-u|--utc]}}`
 
 - Exibe a data atual usando o formato RFC-3339 (`YYYY-MM-DD hh:mm:ss TZ`):
 

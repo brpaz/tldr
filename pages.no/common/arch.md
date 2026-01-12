@@ -1,9 +1,7 @@
 # arch
 
-> Vis navnet på systemarkitekturen.
-> Se også `uname`.
-> Mer informasjon: <https://www.gnu.org/software/coreutils/arch>.
+> Denne kommandoen er et alias for `uname --machine`.
 
-- Vis systemets arkitektur:
+- Vis dokumentasjonen for den opprinnelige kommandoen:
 
-`arch`
+`tldr uname`

@@ -1,8 +1,8 @@
 # emacsclient
 
 > Öffnet Dateien in einem laufenden Emacs-Server.
-> Siehe auch `emacs`.
-> Weitere Informationen: <https://www.emacswiki.org/emacs/EmacsClient>.
+> Siehe auch: `emacs`.
+> Weitere Informationen: <https://www.gnu.org/software/emacs/manual/html_node/emacs/emacsclient-Options.html>.
 
 - Öffne eine Datei in einem laufenden Emacs-Server (mit GUI wenn möglich):
 

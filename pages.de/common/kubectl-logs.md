@@ -1,7 +1,7 @@
 # kubectl logs
 
 > Logs für Container in einem Pod anzeigen.
-> Weitere Informationen: <https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#logs>.
+> Weitere Informationen: <https://kubernetes.io/docs/reference/kubectl/generated/kubectl_logs/>.
 
 - Zeige Logs für einen Einzelcontainer-Pod an:
 
@@ -18,10 +18,6 @@
 - Folge den Pod-Logs (stream):
 
 `kubectl logs --follow {{pod_name}}`
-
-- Folge den Pod-Logs (stream) für einen bestimmten Container in einem Pod:
-
-`kubectl logs --follow --container {{container_name}} {{pod_name}}`
 
 - Zeige Pod-Logs die neuer einer relativen Zeit sind `10s`, `5m`, or `1h`:
 

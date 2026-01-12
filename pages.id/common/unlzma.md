@@ -1,7 +1,6 @@
 # unlzma
 
-> Perintah ini merupakan alias dari `xz`.
-> Informasi lebih lanjut: <https://manned.org/unlzma>.
+> Perintah ini merupakan alias dari `xz --format lzma --decompress`.
 
 - Tampilkan dokumentasi untuk perintah asli:
 

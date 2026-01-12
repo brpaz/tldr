@@ -9,19 +9,19 @@
 
 - Muestra una explicación de cada error:
 
-`pydocstyle {{-e|--explain}} {{archivo.py|ruta/al/directorio}}`
+`pydocstyle {{[-e|--explain]}} {{archivo.py|ruta/al/directorio}}`
 
 - Muestra información de depuración:
 
-`pydocstyle {{-d|--debug}} {{archivo.py|ruta/al/directorio}}`
+`pydocstyle {{[-d|--debug]}} {{archivo.py|ruta/al/directorio}}`
 
 - Muestra el número total de errores:
 
-`pydocstyle --count {{archivo.py|ruta/a/directorio}}`
+`pydocstyle --count {{archivo.py|ruta/al/directorio}}`
 
 - Utiliza un archivo de configuración específico:
 
-`pydocstyle --config {{ruta/a/archivo_config}} {{archivo.py|ruta/al/directorio}}`
+`pydocstyle --config {{ruta/al/archivo_config}} {{archivo.py|ruta/al/directorio}}`
 
 - Ignora uno o más errores:
 
@@ -29,4 +29,4 @@
 
 - Busca errores de una convención específica:
 
-`pydocstyle --convention {{pep257|numpy|google}} {{archivo.py|ruta/a/directorio}}`
+`pydocstyle --convention {{pep257|numpy|google}} {{archivo.py|ruta/al/directorio}}`

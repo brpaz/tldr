@@ -1,7 +1,7 @@
 # jest
 
 > Une plateforme de test JavaScript sans configuration.
-> Plus d'informations : <https://jestjs.io>.
+> Plus d'informations : <https://jestjs.io/docs/cli>.
 
 - Exécuter tous les tests disponibles :
 
@@ -9,7 +9,7 @@
 
 - Exécuter les suites de test de fichiers donnés :
 
-`jest {{chemin/vers/fichier1}} {{chemin/vers/fichier2}}`
+`jest {{chemin/vers/fichier1 chemin/vers/fichier2 ...}}`
 
 - Exécuter les suites de test pour des fichiers, dans le répertoire courant et ses sous-répertoires, dont le chemin correspond à l'expression régulière indiquée :
 

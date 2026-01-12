@@ -1,11 +1,11 @@
 # usql
 
 > Interfaz de línea de comandos universal para bases de datos SQL.
-> Más información: <https://github.com/xo/usql>.
+> Más información: <https://github.com/xo/usql#using>.
 
 - Conecta a una base de datos específica:
 
-`usql {{sqlserver|mysql|postgres|sqlite3|...}}://{{nombre_usuario}}:{{contraseña}}@{{host}}:{{puerto}}/{{nombre_base_de_datos}}`
+`usql {{sqlserver|mysql|postgres|sqlite3|...}}://{{usuario}}:{{contraseña}}@{{host}}:{{puerto}}/{{nombre_base_de_datos}}`
 
 - Ejecuta comandos desde un archivo:
 
@@ -25,7 +25,7 @@
 
 - Exporta los resultados de la consulta a un archivo específico:
 
-`{{prompt}}=> \g {{ruta/a/archivo_con_resultados}}`
+`{{prompt}}=> \g {{ruta/al/archivo_con_resultados}}`
 
 - Importa datos de un archivo CSV a una tabla específica:
 

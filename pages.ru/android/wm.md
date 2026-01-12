@@ -2,12 +2,12 @@
 
 > Показать информацию об экране Android-устройства.
 > Эту команду можно использовать только через `adb shell`.
-> Больше информации: <https://adbinstaller.com/commands/adb-shell-wm-5b672b17e7958178a2955538>.
+> Больше информации: <https://web.archive.org/web/20240420064706/https://adbinstaller.com/commands/adb-shell-wm-5b672b17e7958178a2955538>.
 
 - Показать физический размер экрана Android-устройства:
 
-`wm {{size}}`
+`wm size`
 
 - Показать физическую плотность экрана Android-устройства:
 
-`wm {{density}}`
+`wm density`

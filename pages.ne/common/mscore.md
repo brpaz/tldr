@@ -1,7 +1,6 @@
 # mscore
 
-> यो आदेश `musescore` को उपनाम हो |
-> थप जानकारी: <https://musescore.org/handbook/command-line-options>।
+> यो आदेश `musescore` को उपनाम हो।
 
 - मौलिक आदेशको लागि कागजात हेर्नुहोस्:
 

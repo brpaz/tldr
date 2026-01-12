@@ -1,7 +1,6 @@
 # xzcat
 
-> Perintah ini merupakan alias dari `xz`.
-> Informasi lebih lanjut: <https://manned.org/xzcat>.
+> Perintah ini merupakan alias dari `xz --decompress --stdout`.
 
 - Tampilkan dokumentasi untuk perintah asli:
 

@@ -1,7 +1,7 @@
 # apk
 
 > Herramienta de gestión de paquetes de Alpine Linux.
-> Más información: <https://wiki.alpinelinux.org/wiki/Alpine_Linux_package_management>.
+> Más información: <https://wiki.alpinelinux.org/wiki/Alpine_Package_Keeper>.
 
 - Actualiza los índices de repositorio desde todos los repositorios remotos:
 

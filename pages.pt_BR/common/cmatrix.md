@@ -1,20 +1,21 @@
 # cmatrix
 
 > Exibe um padrão semelhante à Matrix rolando na tela do terminal.
-> Mais informações: <https://github.com/abishekvashok/cmatrix>.
+> Veja também: `cbonsai`, `asciiquarium`, `pipes.sh`.
+> Mais informações: <https://manned.org/cmatrix>.
 
-- Habilita rolagem assincrona:
+- Habilita rolagem assíncrona:
 
 `cmatrix -a`
 
-- Exibe texto em vermelho:
+- Altera a cor do texto (verde por padrão):
 
 `cmatrix -C {{red}}`
 
-- Habilita modo arco-iris:
+- Habilita modo arco-íris:
 
 `cmatrix -r`
 
-- Determina um atraso de 2 centisegundos (20 milisegundos) na atualização da tela:
+- Usa um atraso de atualização da tela de 100 centissegundos (1 segundo):
 
-`cmatrix -u {{2}}`
+`cmatrix -u 100`

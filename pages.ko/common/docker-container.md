@@ -1,7 +1,7 @@
 # docker container
 
 > 도커 컨테이너들을 관리한다.
-> 더 많은 정보: <https://docs.docker.com/engine/reference/commandline/container/>.
+> 더 많은 정보: <https://docs.docker.com/reference/cli/docker/container/>.
 
 - 현재 실행중인 도커 컨테이너들의 목록:
 
@@ -27,7 +27,7 @@
 
 `docker container inspect {{컨테이너_이름}}`
 
-- 컨테이너의 파일 시스템을 tar 아카이브로 내보내기:
+- 컨테이너의 파일 시스템을 `.tar` 아카이브로 내보내기:
 
 `docker container export {{컨테이너_이름}}`
 

@@ -1,8 +1,7 @@
 # unxz
 
-> Bu komut `xz` için bir takma addır.
-> Daha fazla bilgi için: <https://manned.org/unxz>.
+> Bu komut `xz --decompress` için bir takma addır.
 
-- Asıl komutun belgelerini görüntüleyin:
+- Asıl komutun dokümantasyonunu görüntüleyin:
 
 `tldr xz`

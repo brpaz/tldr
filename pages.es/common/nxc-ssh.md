@@ -2,7 +2,7 @@
 
 > Prueba y explota servidores SSH.
 > Vea también: `hydra`.
-> Más información: <https://www.netexec.wiki/ssh-protocol>.
+> Más información: <https://www.netexec.wiki/ssh-protocol/password-spraying>.
 
 - Pulveriza la contraseña especificada contra una lista de nombres de usuario en el objetivo especificado:
 
@@ -18,8 +18,8 @@
 
 - Prueba una combinación de nombres de usuario y contraseñas en una serie de objetivos:
 
-`nxc ssh {{192.168.178.0/24}} -u {{nombre_de_usuario}} -p {{contraseña}}`
+`nxc ssh {{192.168.178.0/24}} -u {{usuario}} -p {{contraseña}}`
 
 - Comprueba los privilegios `sudo` en un inicio de sesión correcto:
 
-`nxc ssh {{192.168.178.2}} -u {{nombre_de_usuario}} -p {{ruta/a/contraseñas.txt}} --sudo-check`
+`nxc ssh {{192.168.178.2}} -u {{usuario}} -p {{ruta/a/contraseñas.txt}} --sudo-check`

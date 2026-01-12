@@ -1,6 +1,7 @@
 # tmux
 
 > Multiplexador do terminal. Permite várias sessões com janelas, painéis e muito mais.
+> Veja também: `zellij`, `screen`.
 > Mais informações: <https://github.com/tmux/tmux>.
 
 - Inicia uma nova sessão:
@@ -21,7 +22,7 @@
 
 - Sai da sessão atual (com o prefixo Ctrl-B):
 
-`<Ctrl>-B d`
+`<Ctrl b><d>`
 
 - Elimina uma sessão com nome:
 

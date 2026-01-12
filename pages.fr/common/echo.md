@@ -1,7 +1,8 @@
 # echo
 
 > Affiche les paramètres donnés dans la console.
-> Plus d'informations : <https://www.gnu.org/software/coreutils/echo>.
+> Voir aussi : `printf`.
+> Plus d'informations : <https://www.gnu.org/software/coreutils/manual/html_node/echo-invocation.html>.
 
 - Affiche un message (les guillemets sont facultatifs) :
 

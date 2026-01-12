@@ -1,6 +1,7 @@
 # modprobe
 
 > Aggiunge o rimuove moduli del kernel Linux.
+> Vedi anche: `kmod`.
 > Maggiori informazioni: <https://manned.org/modprobe>.
 
 - Fa finta di carica un modulo nel kernel, ma non lo fa veramente:
@@ -17,7 +18,7 @@
 
 - Rimuove dal kernel un modulo e quelli che dipendono da quest'ultimo:
 
-`sudo modprobe --remove-dependencies {{nome_del_modulo}}`
+`sudo modprobe {{[-r|--remove]}} --remove-holders {{nome_del_modulo}}`
 
 - Mostra le dipendenza di un modulo del kernel:
 

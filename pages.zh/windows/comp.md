@@ -2,7 +2,7 @@
 
 > 比较两个文件或文件集的内容。
 > 使用通配符（*）来比较文件集。
-> 更多信息：<https://learn.microsoft.com/windows-server/administration/windows-commands/comp>.
+> 更多信息：<https://learn.microsoft.com/windows-server/administration/windows-commands/comp>。
 
 - 交互式比较文件：
 
@@ -34,4 +34,4 @@
 
 - 只比较每个文件前 5 行的内容：
 
-`comp /n={{5}} {{文件 1 的路径}} {{文件 2 的路径}}`
+`comp /n=5 {{文件 1 的路径}} {{文件 2 的路径}}`

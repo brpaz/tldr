@@ -1,7 +1,8 @@
 # echo
 
 > چاپ ورودی داده شده.
-> اطلاعات بیشتر: <https://www.gnu.org/software/coreutils/echo>.
+> همچنین : `printf`.
+> اطلاعات بیشتر: <https://www.gnu.org/software/coreutils/manual/html_node/echo-invocation.html>.
 
 - چاپ پیام ورودی. نکته : استفاده از علامت نقل قول انتخابی است:
 

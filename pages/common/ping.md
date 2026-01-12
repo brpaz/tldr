@@ -3,7 +3,7 @@
 > Send ICMP ECHO_REQUEST packets to network hosts.
 > More information: <https://manned.org/ping>.
 
-- Ping host:
+- Ping a host:
 
 `ping {{host}}`
 
@@ -27,6 +27,6 @@
 
 `ping -O {{host}}`
 
-- Ping a host with specific number of pings, timeout (`-W`) for each reply, and total time limit (`-w`) of the entire ping run:
+- Ping a host with specific number of pings, per-packet response timeout (`-W`), and total time limit (`-w`) of the entire ping run:
 
 `ping -c {{count}} -W {{seconds}} -w {{seconds}} {{host}}`

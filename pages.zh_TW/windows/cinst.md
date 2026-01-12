@@ -1,8 +1,7 @@
 # cinst
 
-> 這是 `choco install` 命令的一個別名。
-> 更多資訊：<https://docs.chocolatey.org/en-us/choco/commands/install>.
+> 此命令為 `choco install` 的別名。
 
-- 原命令的文件在：
+- 檢視原命令的文件：
 
 `tldr choco install`

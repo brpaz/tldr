@@ -1,4 +1,5 @@
 <!-- markdownlint-disable MD041 -->
+
 <div align="center">
   <h1><a href="https://tldr.sh/"><img alt="tldr-pages" src="images/banner.png" width=600/></a></h1>
 
@@ -7,6 +8,7 @@
 [![Merged PRs][prs-merged-image]][prs-merged-url]
 [![GitHub contributors][contributors-image]][contributors-url]
 [![license][license-image]][license-url]
+[![Mastodon][mastodon-image]][mastodon-url]
 
 [github-actions-url]: https://github.com/tldr-pages/tldr/actions
 [github-actions-image]: https://img.shields.io/github/actions/workflow/status/tldr-pages/tldr/ci.yml?branch=main&label=Build
@@ -18,6 +20,8 @@
 [contributors-image]: https://img.shields.io/github/contributors-anon/tldr-pages/tldr.svg?label=Contributors
 [license-url]: https://github.com/tldr-pages/tldr/blob/main/LICENSE.md
 [license-image]: https://img.shields.io/badge/license-CC_BY_4.0-blue.svg?label=License
+[mastodon-url]: https://fosstodon.org/@tldr_pages
+[mastodon-image]: https://img.shields.io/badge/Mastodon-6364FF?logo=mastodon&logoColor=fff
 </div>
 
 ## What is tldr-pages?
@@ -26,7 +30,7 @@ The **tldr-pages** project is a collection of community-maintained help pages
 for command-line tools, that aims to be a simpler, more approachable complement
 to traditional [man pages](https://en.wikipedia.org/wiki/Man_page).
 
-Maybe you're new to the command-line world? Perhaps you're just a little rusty or can't always recall the arguments for commands like `lsof`, or `tar`?
+Maybe you're new to the command-line world. Perhaps you're just a little rusty or can't always recall the arguments for commands like `lsof`, or `tar`?
 
 It certainly doesn't help that, in the past, the first option explained in `man tar` was:
 
@@ -40,7 +44,7 @@ $ man tar
 ...
 ```
 
-There seems to be room for simpler help pages, focused on practical examples.
+There is room for simpler help pages focused on practical examples.
 How about:
 
 <picture>
@@ -50,7 +54,8 @@ How about:
 </picture>
 
 This repository is just that: an ever-growing collection of examples
-for the most common UNIX, Linux, macOS, SunOS, Android, and Windows command-line tools.
+for the most common UNIX, Linux, macOS, FreeBSD, NetBSD, OpenBSD,
+SunOS, Android, Windows, Cisco IOS, and DOS command-line tools.
 
 ## How do I use it?
 
@@ -59,16 +64,10 @@ for the most common UNIX, Linux, macOS, SunOS, Android, and Windows command-line
 > see the web client at <https://tldr.inbrowser.app> (with offline support using PWA).
 
 A popular and convenient way to access these pages on your computer
-is to install the official [Node.js client](https://github.com/tldr-pages/tldr-node-client):
+is to install the official [Python client](https://github.com/tldr-pages/tldr-python-client), which can be installed from [PyPI](https://pypi.org/project/tldr/) via [pipx](https://github.com/pypa/pipx) (or [other package managers](https://github.com/tldr-pages/tldr-python-client#installation)):
 
 ```shell
-npm install -g tldr
-```
-
-Alternatively, you can also use the official [Python client](https://github.com/tldr-pages/tldr-python-client), which can be installed via [pip3](https://pypi.org/project/tldr/) (or [other package managers](https://github.com/tldr-pages/tldr-python-client#installation)):
-
-```shell
-pip3 install tldr
+pipx install tldr
 ```
 
 Linux and Mac users can also install the official [Rust Client](https://github.com/tldr-pages/tlrc) using [Homebrew](https://formulae.brew.sh/formula/tlrc)
@@ -78,17 +77,29 @@ Linux and Mac users can also install the official [Rust Client](https://github.c
 brew install tlrc
 ```
 
+Windows users can also install the official [Rust Client](https://github.com/tldr-pages/tlrc) using [Winget](https://github.com/microsoft/winget-pkgs/tree/master/manifests/t/tldr-pages/tlrc) (or [other package managers](https://github.com/tldr-pages/tlrc#installation) on other operating systems):
+
+```shell
+winget install tldr-pages.tlrc
+```
+
+Alternatively, you can also use the official [Node.js client](https://github.com/tldr-pages/tldr-node-client), although it has fallen behind in updates:
+
+```shell
+npm install -g tldr
+```
+
 Then you have direct access to simplified, easy-to-read help for commands, such as `tar`,
 accessible through typing `tldr tar` instead of the standard `man tar`.
 
 If you don't want to install any software, check out the [PDF version](https://github.com/tldr-pages/tldr/releases/latest/download/tldr-book.pdf) instead.
 
 > [!NOTE]
-> PDFs for translations are available for most languages. You can find them in the releases assets of the [latest release](https://github.com/tldr-pages/tldr/releases/latest).
+> PDFs for translations are available for most languages. You can find them in the release assets of the [latest release](https://github.com/tldr-pages/tldr/releases/latest).
 
 There are also **various other clients** provided by the community,
 both for the command-line and for other platforms.
-For a comprehensive list of clients, head over to our [Wiki](https://github.com/tldr-pages/tldr/wiki/tldr-pages-clients).
+For a comprehensive list of clients, head over to our [Wiki](https://github.com/tldr-pages/tldr/wiki/Clients).
 
 ## How do I contribute to tldr-pages?
 
@@ -101,7 +112,7 @@ Some ways to contribute include:
 - Adding requested pages from our issues with the [help wanted](https://github.com/tldr-pages/tldr/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22) label.
 - Translating pages into different languages.
 
-All `tldr` pages are written in markdown, so they can be edited quite easily and changes can be submitted in
+All `tldr` pages are written in Markdown so that they can be edited quite easily and changes can be submitted in
 pull requests here using Git on the command-line or
 using the GitHub web interface.
 
@@ -115,14 +126,6 @@ You are also welcome to join us on the [matrix chatroom](https://matrix.to/#/#tl
 
 ## Similar projects
 
-- [Command Line Interface Pages](https://github.com/command-line-interface-pages)
-  allows you to write standardized help pages for CLI, directories, and configs.
-
-- [Cheat](https://github.com/cheat/cheat)
-  allows you to create and view interactive cheatsheets on the command-line.
-  It was designed to help remind Unix system administrators of options
-  for commands that they use frequently, but not frequently enough to remember.
-
 - [cheat.sh](https://cheat.sh/)
   Aggregates cheat sheets from multiple sources (including tldr-pages)
   into 1 unified interface.
@@ -135,7 +138,7 @@ You are also welcome to join us on the [matrix chatroom](https://matrix.to/#/#tl
   provides detailed examples with explanations on the command-line.
   Examples come from the repository, but `eg` supports displaying
   custom examples and commands alongside the defaults.
-  
+
 - [kb](https://github.com/gnebbia/kb)
   is a minimalist command-line knowledge base manager.
   kb can be used to organize your notes and cheatsheets in a minimalist
@@ -144,6 +147,14 @@ You are also welcome to join us on the [matrix chatroom](https://matrix.to/#/#tl
 - [navi](https://github.com/denisidoro/navi)
   is an interactive cheatsheet tool, which allows you to browse through
   specific examples or complete commands on the fly.
+
+- [Cheat](https://github.com/cheat/cheat)
+  allows you to create and view interactive cheatsheets on the command-line.
+  It was designed to help remind Unix system administrators of options
+  for commands that they use frequently, but not frequently enough to remember.
+
+- [Command Line Interface Pages](https://github.com/command-line-interface-pages)
+  allows you to write standardized help pages for CLI, directories, and configs.
 
 - [bropages (deprecated)](http://bropages.org)
   are a highly readable supplement to man pages.

@@ -2,15 +2,15 @@
 
 > An arbitrary precision calculator language.
 > See also: `dc`, `qalc`.
-> More information: <https://manned.org/bc.1>.
+> More information: <https://manned.org/bc>.
 
 - Start an interactive session:
 
 `bc`
 
-- Start an [i]nteractive session with the standard math [l]ibrary enabled:
+- Start an interactive session with the standard math library enabled:
 
-`bc --interactive --mathlib`
+`bc {{[-i|--interactive]}} {{[-l|--mathlib]}}`
 
 - Calculate an expression:
 
@@ -26,7 +26,7 @@
 
 - Calculate a sine/cosine/arctangent/natural logarithm/exponential function using `mathlib`:
 
-`echo '{{s|c|a|l|e}}({{1}})' | bc --mathlib`
+`echo '{{s|c|a|l|e}}({{1}})' | bc {{[-l|--mathlib]}}`
 
 - Execute an inline factorial script:
 

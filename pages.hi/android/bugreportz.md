@@ -12,10 +12,14 @@
 
 `bugreportz -p`
 
-- `bugreportz` का संस्करण दिखाएँ:
+- एंड्रॉइड बग रिपोर्ट की सामग्री को `stdout` में लिखें:
 
-`bugreportz -v`
+`bugreportz -s`
 
 - सहायता प्रदर्शित करें:
 
 `bugreportz -h`
+
+- `bugreportz` का संस्करण दिखाएँ:
+
+`bugreportz -v`

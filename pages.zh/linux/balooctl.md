@@ -1,11 +1,7 @@
 # balooctl
 
 > KDE Plasma 的文件索引和搜索框架。
-> 更多信息：<https://wiki.archlinux.org/index.php/Baloo>.
-
-- 查看帮助：
-
-`balooctl`
+> 更多信息：<https://wiki.archlinux.org/title/Baloo>。
 
 - 显示索引器状态：
 
@@ -34,3 +30,7 @@
 - 检查未索引的文件并索引它们：
 
 `balooctl check`
+
+- 显示帮助：
+
+`balooctl --help`

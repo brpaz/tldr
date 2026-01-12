@@ -1,7 +1,7 @@
 # a2dismod
 
 > Deaktiviert ein Apache-Modul auf Debian-basierten Betriebssystemen.
-> Weitere Informationen: <https://manpages.debian.org/latest/apache2/a2dismod.8.en.html>.
+> Weitere Informationen: <https://manned.org/a2dismod>.
 
 - Deaktiviere ein Modul:
 
@@ -9,4 +9,4 @@
 
 - Zeige keine Informationsnachrichten an:
 
-`sudo a2dismod --quiet {{modul}}`
+`sudo a2dismod {{[-q|--quiet]}} {{modul}}`

@@ -2,6 +2,7 @@
 
 > Canvia salts de línia amb format DOS a salts de línia amb format Unix.
 > Reemplaça CRLF amb LF.
+> Vegeu també: `unix2dos`, `unix2mac`, `mac2unix`.
 > Més informació: <https://manned.org/dos2unix>.
 
 - Canvia els salts de línia en un arxiu:
@@ -10,4 +11,4 @@
 
 - Crea una còpia amb salts de línia en format Unix:
 
-`dos2unix -n {{nom_del_arxiu}} {{nou_nom_del_arxiu}}`
+`dos2unix {{[-n|--newfile]}} {{nom_del_arxiu}} {{nou_nom_del_arxiu}}`

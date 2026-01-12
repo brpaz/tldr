@@ -1,7 +1,7 @@
 # a2dissite
 
 > Desactiva un host virtual d'Apache en sistemes operatius basats en Debian.
-> Més informació: <https://manpages.debian.org/latest/apache2/a2dissite.8.en.html>.
+> Més informació: <https://manned.org/a2dissite>.
 
 - Desactiva un host virtual:
 
@@ -9,4 +9,4 @@
 
 - No mostris missatges informatius:
 
-`sudo a2dissite --quiet {{host_virtual}}`
+`sudo a2dissite {{[-q|--quiet]}} {{host_virtual}}`

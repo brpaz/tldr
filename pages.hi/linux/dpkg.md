@@ -2,8 +2,8 @@
 
 > डेबियन पैकेज प्रबंधक।
 > कुछ उपकमांड जैसे `dpkg deb` के अपने स्वयं के उपयोग दस्तावेज़ हैं।
-> अन्य पैकेज प्रबंधकों में समकक्ष कमांड के लिए, देखें <https://wiki.archlinux.org/title/Pacman/Rosetta>.
-> अधिक जानकारी: <https://manpages.debian.org/latest/dpkg/dpkg.html>।
+> अन्य पैकेज प्रबंधकों में समकक्ष कमांड के लिए, देखें <https://wiki.archlinux.org/title/Pacman/Rosetta>।
+> अधिक जानकारी: <https://manned.org/dpkg>।
 
 - एक पैकेज इनस्टॉल करें:
 

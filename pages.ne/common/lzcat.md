@@ -1,7 +1,6 @@
 # lzcat
 
-> यो आदेश `xz` को उपनाम हो |
-> थप जानकारी: <https://manned.org/lzcat>।
+> यो आदेश `xz --format lzma --decompress --stdout` को उपनाम हो।
 
 - मौलिक आदेशको लागि कागजात हेर्नुहोस्:
 

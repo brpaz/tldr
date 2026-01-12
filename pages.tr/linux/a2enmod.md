@@ -1,7 +1,7 @@
 # a2enmod
 
 > Debian tabanlı işletim sistemlerinde Apache modülünü etkinleştir.
-> Daha fazla bilgi için: <https://manpages.debian.org/latest/apache2/a2enmod.8.en.html>.
+> Daha fazla bilgi için: <https://manned.org/a2enmod>.
 
 - Bir modülü etkinleştir:
 
@@ -9,4 +9,4 @@
 
 - Bilgilendirici mesajları gösterme:
 
-`sudo a2enmod --quiet {{modül}}`
+`sudo a2enmod {{[-q|--quiet]}} {{modül}}`

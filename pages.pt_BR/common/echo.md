@@ -1,7 +1,8 @@
 # echo
 
 > Imprime os argumentos passados.
-> Mais informações: <https://www.gnu.org/software/coreutils/echo>.
+> Veja também: `printf`.
+> Mais informações: <https://www.gnu.org/software/coreutils/manual/html_node/echo-invocation.html>.
 
 - Imprime uma mensagem de texto. Nota: aspas são opcionais:
 

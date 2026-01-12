@@ -1,7 +1,7 @@
 # apt-file
 
 > Cerca un file dentro un pacchetto APT, includendo quelli non ancora installati.
-> Maggiori informazioni: <https://manpages.debian.org/latest/apt-file/apt-file.1.html>.
+> Maggiori informazioni: <https://manned.org/apt-file.1>.
 
 - Aggiorna il database dei metadati:
 
@@ -9,8 +9,8 @@
 
 - Cerca i pacchetti che contengono un file o un percorso specificato:
 
-`apt-file search {{parte/del/filename}}`
+`apt-file {{search|find}} {{parte/del/filename}}`
 
 - Elenca i contenuti di un pacchetto specifico:
 
-`apt-file list {{nome_del_pacchetto}}`
+`apt-file {{show|list}} {{nome_del_pacchetto}}`

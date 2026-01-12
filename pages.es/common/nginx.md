@@ -1,7 +1,7 @@
 # nginx
 
-> Servidor web Nginx.
-> Más información: <https://nginx.org/en/>.
+> Servidor web `nginx`.
+> Más información: <https://nginx.org/docs/switches.html>.
 
 - Inicia el servidor con el archivo de configuración por defecto:
 

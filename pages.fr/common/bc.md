@@ -1,8 +1,8 @@
 # bc
 
 > Un langage de calcul de précision arbitraire.
-> Voir aussi : `dc`.
-> Plus d'informations : <https://manned.org/bc.1>.
+> Voir aussi : `dc`, `qalc`.
+> Plus d'informations : <https://manned.org/bc>.
 
 - Démarre une session interactive :
 

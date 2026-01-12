@@ -1,7 +1,7 @@
 # docker container
 
 > Verwalte Docker Container.
-> Weitere Informationen: <https://docs.docker.com/engine/reference/commandline/container/>.
+> Weitere Informationen: <https://docs.docker.com/reference/cli/docker/container/>.
 
 - Liste zur Zeit laufende Container auf:
 
@@ -27,7 +27,7 @@
 
 `docker container inspect {{container_name}}`
 
-- Exportiere das Dateisystem eines Containers als tar Archiv:
+- Exportiere das Dateisystem eines Containers als `.tar` Archiv:
 
 `docker container export {{container_name}}`
 

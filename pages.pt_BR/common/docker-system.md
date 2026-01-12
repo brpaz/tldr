@@ -1,7 +1,7 @@
 # docker system
 
 > Gerenciar dados do Docker e exibir informações do sistema em todo o sistema.
-> Mais informações: <https://docs.docker.com/engine/reference/commandline/system/>.
+> Mais informações: <https://docs.docker.com/reference/cli/docker/system/>.
 
 - Mostra ajuda:
 
@@ -13,7 +13,7 @@
 
 - Mostra informações detalhadas sobre o uso de disco:
 
-`docker system df --verbose`
+`docker system df {{[-v|--verbose]}}`
 
 - Remove dados não utilizados:
 
@@ -29,7 +29,7 @@
 
 - Exibe eventos em tempo real de contêineres transmitidos como JSON Lines válidos:
 
-`docker system events --filter 'type=container' --format '{{json .}}'`
+`docker system events {{[-f|--filter]}} 'type=container' --format '{{json .}}'`
 
 - Exibe informações em todo o sistema:
 

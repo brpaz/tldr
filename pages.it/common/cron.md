@@ -1,7 +1,8 @@
 # cron
 
-> Questo comando è un alias per `crontab`.
+> Un pianificatore di sistema per eseguire processi o attività in modo automatico.
+> Il comando per aggiungere, modificare o eliminare voci in cron è chiamato `crontab`.
 
-- Consulta la documentazione del comando originale:
+- Visualizza la documentazione per la gestione delle voci di cron:
 
 `tldr crontab`

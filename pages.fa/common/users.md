@@ -1,7 +1,8 @@
 # users
 
 > نمایش لیست کاربران لاگین شده.
-> اطلاعات بیشتر: <https://www.gnu.org/software/coreutils/users>.
+> همچنین : `who`, `w`, `useradd`, `userdel`, `usermod`.
+> اطلاعات بیشتر: <https://www.gnu.org/software/coreutils/manual/html_node/users-invocation.html>.
 
 - نمایش لیست کاربران لاگین شده:
 

@@ -1,8 +1,8 @@
 # choco
 
 > Ein Kommandozeilenwerkzeug für die Chocolatey Paketverwaltung.
-> Manche Unterbefehle wie `choco install` sind separat dokumentiert.
-> Weitere Informationen: <https://chocolatey.org>.
+> Manche Unterbefehle wie `install` sind separat dokumentiert.
+> Weitere Informationen: <https://docs.chocolatey.org/en-us/choco/commands/>.
 
 - Führe einen Chocolatey-Befehl aus:
 

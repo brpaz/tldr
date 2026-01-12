@@ -1,7 +1,7 @@
 # bugreportz
 
 > Gera um relatório de bugs do Android em formato Zip.
-> Esse comando só pode ser utilizado por meio de  `adb shell`.
+> Esse comando só pode ser utilizado por meio de `adb shell`.
 > Mais informações: <https://cs.android.com/android/platform/superproject/+/main:frameworks/native/cmds/bugreportz>.
 
 - Mostra um relatório completo de bugs de um dispositivo Android em formato Zip:
@@ -12,10 +12,14 @@
 
 `bugreportz -p`
 
-- Mostra a versão de `bugreportz`:
+- Escreve o conteúdo de um relatório de bug do Android para `stdout`:
 
-`bugreportz -v`
+`bugreportz -s`
 
 - Mostra a ajuda:
 
 `bugreportz -h`
+
+- Mostra a versão de `bugreportz`:
+
+`bugreportz -v`

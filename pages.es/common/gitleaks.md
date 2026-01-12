@@ -1,11 +1,11 @@
 # gitleaks
 
 > Detecta secretos y claves API filtradas en repositorios Git.
-> Más información: <https://github.com/gitleaks/gitleaks>.
+> Más información: <https://github.com/gitleaks/gitleaks#usage>.
 
 - Escanea un repositorio remoto:
 
-`gitleaks detect --repo-url {{https://github.com/nombre_usuario/repositorio.git}}`
+`gitleaks detect --repo-url {{https://github.com/usuario/repositorio.git}}`
 
 - Escanea un directorio local:
 
@@ -17,7 +17,7 @@
 
 - Utiliza un archivo de reglas personalizado:
 
-`gitleaks detect --source {{ruta/al/repositorio}} --config-path {{ruta/a/archivo_de_configuración.toml}}`
+`gitleaks detect --source {{ruta/al/repositorio}} --config-path {{ruta/al/archivo_de_configuración.toml}}`
 
 - Inicia la búsqueda a partir de una confirmación específica:
 

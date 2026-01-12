@@ -1,7 +1,7 @@
 # docker build
 
 > Cria uma imagem a partir de um Dockerfile.
-> Mais informações: <https://docs.docker.com/engine/reference/commandline/build/>.
+> Mais informações: <https://docs.docker.com/reference/cli/docker/buildx/build/>.
 
 - Cria uma imagem Docker usando o Dockerfile no diretório atual:
 
@@ -13,19 +13,19 @@
 
 - Cria uma imagem Docker e cria uma etiqueta para ela:
 
-`docker build --tag {{nome:etiqueta}} .`
+`docker build {{[-t|--tag]}} {{nome:etiqueta}} .`
 
 - Cria uma imagem Docker sem contexto de criação:
 
-`docker build --tag {{nome:etiqueta}} - < {{Dockerfile}}`
+`docker build {{[-t|--tag]}} {{nome:etiqueta}} - < {{Dockerfile}}`
 
 - Não usa o cache na criação da imagem:
 
-`docker build --no-cache --tag {{nome:etiqueta}} .`
+`docker build --no-cache {{[-t|--tag]}} {{nome:etiqueta}} .`
 
 - Cria uma imagem Docker usando um Dockerfile específico:
 
-`docker build --file {{Dockerfile}} .`
+`docker build {{[-f|--file]}} {{Dockerfile}} .`
 
 - Cria uma imagem Docker utilizando variáveis customizadas para a criação de imagens:
 

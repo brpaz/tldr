@@ -1,7 +1,7 @@
 # cal
 
 > Toon een kalender.
-> Meer informatie: <https://man.freebsd.org/cgi/man.cgi?cal>.
+> Meer informatie: <https://man.netbsd.org/cal.1>.
 
 - Toon een kalender voor de huidige maand:
 
@@ -15,11 +15,11 @@
 
 `cal {{maand}} {{jaar}}`
 
-- Toon de volledige kalender voor het huidige jaar door gebruik te maken van [j]ulian dagen  (beginnend vanaf één, genummerd vanaf 1 januari):
+- Toon de volledige kalender voor het huidige jaar door gebruik te maken van [j]ulian dagen (beginnend vanaf één, genummerd vanaf 1 januari):
 
 `cal -y -j`
 
-- Markeer ([h]) vandaag en toon [3] maanden rondom de datum::
+- Markeer ([h]) vandaag en toon [3] maanden rondom de datum:
 
 `cal -h -3 {{maand}} {{jaar}}`
 

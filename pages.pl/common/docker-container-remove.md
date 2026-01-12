@@ -1,8 +1,7 @@
 # docker container remove
 
-> To polecenie jest aliasem `docker rm`.
-> Więcej informacji: <https://docs.docker.com/engine/reference/commandline/rm>.
+> To polecenie jest aliasem `docker container rm`.
 
 - Zobacz dokumentację oryginalnego polecenia:
 
-`tldr docker rm`
+`tldr docker container rm`

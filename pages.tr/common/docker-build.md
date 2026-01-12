@@ -1,7 +1,7 @@
 # docker build
 
 > Bir Dockerfile'dan imge yaratın.
-> Daha fazla bilgi için: <https://docs.docker.com/engine/reference/commandline/build/>.
+> Daha fazla bilgi için: <https://docs.docker.com/reference/cli/docker/buildx/build/>.
 
 - Mevcut dizindeki Dockerfile'dan bir Docker imgesi oluşturun:
 
@@ -13,15 +13,15 @@
 
 - Bir Docker imgesi oluşturun ve etiketleyin:
 
-`docker build --tag {{isim:etiket}} .`
+`docker build {{[-t|--tag]}} {{isim:etiket}} .`
 
 - İmge oluştururken çerez kullanımını etkisizleştirin:
 
-`docker build --no-cache --tag {{isim:etiket}} .`
+`docker build --no-cache {{[-t|--tag]}} {{isim:etiket}} .`
 
 - Belirtilen Dockerfile ile bir Docker imgesi oluşturun:
 
-`docker build --file {{Dockerfile}} .`
+`docker build {{[-f|--file]}} {{Dockerfile}} .`
 
 - Kişiselleştirilmiş yapım-zaman değerleriyle oluşturun:
 

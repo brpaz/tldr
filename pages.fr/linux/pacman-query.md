@@ -1,8 +1,8 @@
 # pacman --query
 
 > Fais des requêtes dans la base de données des paquets installés.
-> Voir aussi: `pacman`.
-> Plus d'informations : <https://man.archlinux.org/man/pacman.8>.
+> Voir aussi : `pacman`.
+> Plus d'informations : <https://manned.org/pacman.8>.
 
 - Liste les paquets installés et leur version :
 

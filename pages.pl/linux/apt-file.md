@@ -1,7 +1,7 @@
 # apt-file
 
 > Wyszukaj pliki w pakietach APT, w tym jeszcze nie zainstalowanych.
-> Więcej informacji: <https://manpages.debian.org/latest/apt-file/apt-file.1.html>.
+> Więcej informacji: <https://manned.org/apt-file.1>.
 
 - Zaktualizuj bazę metadanych:
 
@@ -15,6 +15,6 @@
 
 `apt-file {{show|list}} {{pakiet}}`
 
-- Wyszukaj pakiety, które pasują do podanego `wyrażenia_regularnego`:
+- Wyszukaj pakiety, które pasują do podanego `wyrażenia_regularnego`:
 
-`apt-file {{search|find}} --regexp {{wyrażenie_regularne}}`
+`apt-file {{search|find}} {{[-x|--regexp]}} {{wyrażenie_regularne}}`

@@ -1,7 +1,7 @@
 # behat
 
 > Behaviour-Driven 개발을 위한 PHP 프레임워크.
-> 더 많은 정보: <https://behat.org>.
+> 더 많은 정보: <https://docs.behat.org/en/latest/user_guide/command_line_tool.html>.
 
 - 새로운 Behat 프로젝트 초기화:
 
@@ -13,7 +13,7 @@
 
 - 지정된 suite에서 모든 테스트 실행:
 
-`behat --suite={{suite_명}}`
+`behat --suite {{suite_명}}`
 
 - 특정 출력 formatter로 테스트 실행:
 

@@ -1,8 +1,7 @@
 # todoman
 
-> 這是 `todo` 命令的一個別名。
-> 更多資訊：<https://todoman.readthedocs.io/>.
+> 此命令為 `todo` 的別名。
 
-- 原命令的文件在：
+- 檢視原命令的文件：
 
 `tldr todo`

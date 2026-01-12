@@ -1,8 +1,7 @@
 # fossil ci
 
-> Aquest comandament es un àlies de `fossil commit`.
-> Més informació: <https://fossil-scm.org/home/help/commit>.
+> Aquest comandament és un àlies de `fossil commit`.
 
-- Veure documentació per el comandament original:
+- Veure documentació pel comandament original:
 
-`tldr fossil-commit`
+`tldr fossil commit`

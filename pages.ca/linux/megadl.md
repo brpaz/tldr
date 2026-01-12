@@ -1,8 +1,7 @@
 # megadl
 
-> Aquest comandament es un àlies de `megatools-dl`.
-> Més informació: <https://megatools.megous.com/man/megatools-dl.html>.
+> Aquest comandament és un àlies de `megatools-dl`.
 
-- Veure documentació per el comandament original:
+- Veure documentació pel comandament original:
 
 `tldr megatools-dl`

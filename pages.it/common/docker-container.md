@@ -1,7 +1,7 @@
 # docker container
 
 > Gestisci container Docker.
-> Maggiori informazioni: <https://docs.docker.com/engine/reference/commandline/container/>.
+> Maggiori informazioni: <https://docs.docker.com/reference/cli/docker/container/>.
 
 - Elenca i container Docker attualmente in esecuzione:
 
@@ -27,7 +27,7 @@
 
 `docker container inspect {{nome_container}}`
 
-- Esporta il filesystem di un container come archivio tar:
+- Esporta il filesystem di un container come archivio `.tar`:
 
 `docker container export {{nome_container}}`
 

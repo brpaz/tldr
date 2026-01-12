@@ -1,7 +1,7 @@
 # blackfire
 
 > Strumento di profilazione da linea di comando per PHP.
-> Maggiori informazioni: <https://blackfire.io>.
+> Maggiori informazioni: <https://www.blackfire.io/>.
 
 - Inizializza e configura il client Blackfire:
 
@@ -21,7 +21,7 @@
 
 - Lancia il profiler e raccogli 10 campioni:
 
-`blackfire --samples={{10}} run {{php percorso/del/file.php}}`
+`blackfire --samples 10 run {{php percorso/del/file.php}}`
 
 - Lancia il profiler e mostra i risultati in output come JSON:
 

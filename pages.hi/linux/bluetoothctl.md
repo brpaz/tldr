@@ -1,7 +1,8 @@
 # bluetoothctl
 
 > ब्लूटूथ उपकरणों का प्रबंधन करें।
-> अधिक जानकारी: <https://bitbucket.org/serkanp/bluetoothctl>।
+> यह भी देखें: `bluetui`।
+> अधिक जानकारी: <https://manned.org/bluetoothctl>।
 
 - `bluetoothctl` शैल में प्रवेश करें:
 

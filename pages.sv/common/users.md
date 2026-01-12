@@ -1,7 +1,8 @@
 # users
 
 > Visa en lista över inloggade användare.
-> Mer information: <https://www.gnu.org/software/coreutils/users>.
+> Se även: `who`, `w`, `useradd`, `userdel`, `usermod`.
+> Mer information: <https://www.gnu.org/software/coreutils/manual/html_node/users-invocation.html>.
 
 - Visa en lista över inloggade användare:
 

@@ -1,6 +1,7 @@
 # tmux
 
 > Multiplexeur de terminaux. Permet plusieurs sessions avec fenêtres, panneaux, et plus encore.
+> Voir aussi : `zellij`, `screen`.
 > Plus d'informations : <https://github.com/tmux/tmux>.
 
 - Démarrer une nouvelle session :
@@ -21,7 +22,7 @@
 
 - Se détacher de la session actuelle (avec le préfixe Ctrl-B) :
 
-`<Ctrl>-B d`
+`<Ctrl b><d>`
 
 - Détruire une session nommée :
 

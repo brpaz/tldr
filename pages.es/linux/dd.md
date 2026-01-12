@@ -1,7 +1,8 @@
 # dd
 
 > Convierte y copia un archivo.
-> Más información: <https://www.gnu.org/software/coreutils/dd>.
+> Vea también: `caligula`.
+> Más información: <https://www.gnu.org/software/coreutils/manual/html_node/dd-invocation.html>.
 
 - Crea una unidad USB de arranque a partir de un archivo isohybrid (como `archlinux-xxx.iso`) y muestra el progreso:
 

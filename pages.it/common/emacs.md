@@ -1,11 +1,12 @@
 # emacs
 
 > Editor di testo in tempo reale, estendibile, personalizzabile e auto documentato.
+> Vedi anche: `emacsclient`.
 > Maggiori informazioni: <https://www.gnu.org/software/emacs>.
 
 - Avvia emacs in modalità console (senza finestra X):
 
-`emacs -nw`
+`emacs {{[-nw|--no-window-system]}}`
 
 - Apri un file in emacs:
 
@@ -13,4 +14,4 @@
 
 - Esci da emacs (salva i buffer e termina):
 
-`<Ctrl> + X, <Ctrl> + C`
+`<Ctrl x><Ctrl c>`

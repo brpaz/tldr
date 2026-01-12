@@ -1,7 +1,7 @@
 # aws iam
 
 > Interactúa con el Manejo de Identidad y Acceso (o "IAM" en inglés), un servicio web para controlar seguramente el acceso a servicios de AWS.
-> Más información: <https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/index.html>.
+> Más información: <https://docs.aws.amazon.com/cli/latest/reference/iam/>.
 
 - Lista usuarios:
 
@@ -29,7 +29,7 @@
 
 - Lista claves de acceso para un usuario específico:
 
-`aws iam list-access-keys --user-name {{nombre_de_usuario}}`
+`aws iam list-access-keys --user-name {{usuario}}`
 
 - Muestra ayuda:
 

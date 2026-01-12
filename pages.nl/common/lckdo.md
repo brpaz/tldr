@@ -1,8 +1,8 @@
 # lckdo
 
 > Dit commando is verouderd en vervangen door `flock`.
-> Meer informatie: <https://joeyh.name/code/moreutils/>.
+> Meer informatie: <https://manned.org/lckdo>.
 
-- Bekijk documentatie voor de aanbevolen vervanging:
+- Bekijk de documentatie van de aanbevolen vervanging:
 
 `tldr flock`

@@ -1,7 +1,7 @@
 # virsh
 
 > virsh 게스트 도메인을 관리합니다. (Note: 'guest_id'는 게스트의 아이디, 이름 또는 UUID일 수 있습니다).
-> `virsh list`와 같은 일부 하위 명령에는 자체 사용 설명서가 있습니다.
+> `list`와 같은 일부 하위 명령에는 자체 사용 설명서가 있습니다.
 > 더 많은 정보: <https://libvirt.org/manpages/virsh.html>.
 
 - 하이퍼아비저 세션에 연결:
@@ -20,7 +20,7 @@
 
 `virsh create {{경로/대상/구성 파일.xml}}`
 
-- 게스트의 구성 파일 편집 (편집기는 $EDITOR로 변경할 수 있음):
+- 게스트의 구성 파일 편집 (편집기는 `$EDITOR`로 변경할 수 있음):
 
 `virsh edit {{게스트_아이디}}`
 

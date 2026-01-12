@@ -1,7 +1,7 @@
 # git commit-tree
 
 > Commit cisimleri oluşturmaya yarayan düşük seviyeli araç.
-> Ayrıca `git commit` sayfasına bakılması önerilir.
+> Ayrıca bakınız: `git commit`.
 > Daha fazla bilgi için: <https://git-scm.com/docs/git-commit-tree>.
 
 - Belirtilen mesaj ile bir commit cismi oluştur:
@@ -14,7 +14,7 @@
 
 - GPG anahtarıyla imzalanmış bir commit cismi oluştur:
 
-`git commit-tree {{ağaç}} -m "{{mesaj}}" --gpg-sign`
+`git commit-tree {{ağaç}} -m "{{mesaj}}" {{[-S|--gpg-sign]}}`
 
 - Belirtilen ana commit cismi ile bir commit cismi oluştur:
 

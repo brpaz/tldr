@@ -1,8 +1,8 @@
 # pacman --remove
 
 > Supprimes des paquets.
-> Voir aussi: `pacman`.
-> Plus d'informations : <https://man.archlinux.org/man/pacman.8>.
+> Voir aussi : `pacman`.
+> Plus d'informations : <https://manned.org/pacman.8>.
 
 - Supprime un paquet et ses dépendances :
 

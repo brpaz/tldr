@@ -1,8 +1,7 @@
 # megadl
 
-> 这是 `megatools-dl` 命令的一个别名。
-> 更多信息：<https://megatools.megous.com/man/megatools-dl.html>.
+> 此命令为 `megatools-dl` 的别名。
 
-- 原命令的文档在：
+- 查看原命令的文档：
 
 `tldr megatools-dl`

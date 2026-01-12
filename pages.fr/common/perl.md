@@ -1,7 +1,8 @@
 # perl
 
 > Interpréteur du langage Perl (version 5).
-> Plus d'informations : <https://www.perl.org>.
+> Voir aussi : `perldoc`.
+> Plus d'informations : <https://perldoc.perl.org/perl>.
 
 - Exécuter le code contenu dans un fichier :
 
@@ -31,6 +32,6 @@
 
 `perl -p0e 's/{{recherche}}/{{remplacement}}/g' {{fichier_entrée}} > {{fichier_sortie}}`
 
-- Lancer une expression régulière (RegEx) sur `stdin`, en affichant le premier groupe capturé pour chaque ligne :
+- Lancer une expression régulière (`regex`) sur `stdin`, en affichant le premier groupe capturé pour chaque ligne :
 
 `cat {{fichier_entrée}} | perl -nle 'if (/{{regex}}/) { print "$1"; last;}'`

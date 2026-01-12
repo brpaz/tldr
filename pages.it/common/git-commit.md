@@ -5,11 +5,11 @@
 
 - Committa sul repository i file nell'area di stage con un messaggio:
 
-`git commit -m "{{messaggio}}"`
+`git commit {{[-m|--message]}} "{{messaggio}}"`
 
 - Aggiungi all'area di stage tutti i file modificati e committali con un messaggio:
 
-`git commit -a -m "{{messaggio}}"`
+`git commit {{[-a|--all]}} {{[-m|--message]}} "{{messaggio}}"`
 
 - Sostituisci l'ultimo commit con le modifiche attualmente salvate nell'area di stage:
 
@@ -17,4 +17,4 @@
 
 - Committa solo i file specificati (tra quelli presenti nell'area di stage):
 
-`git commit {{percorso/del/file1}} {{percorso/del/file2}}`
+`git commit {{percorso/del/file1 percorso/del/file2 ...}}`

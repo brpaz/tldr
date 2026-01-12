@@ -1,7 +1,8 @@
 # cmatrix
 
 > Mostra una pantalla similar a la de Matrix en la terminal.
-> Més informació: <https://github.com/abishekvashok/cmatrix>.
+> Vegeu també: `cbonsai`, `asciiquarium`, `pipes.sh`.
+> Més informació: <https://manned.org/cmatrix>.
 
 - Activa el desplaçament asíncron:
 
@@ -15,6 +16,6 @@
 
 `cmatrix -r`
 
-- Estableix el retràs d'actualització de la pantalla a 2 centrisegons (20 mil·lisegons):
+- Estableix el retràs d'actualització de la pantalla a 100 centrisegons (1 segons):
 
-`cmatrix -u {{2}}`
+`cmatrix -u 100`

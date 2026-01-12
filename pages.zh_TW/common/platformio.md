@@ -1,8 +1,7 @@
 # platformio
 
-> 這是 `pio` 命令的一個別名。
-> 更多資訊：<https://docs.platformio.org/en/latest/core/userguide/>.
+> 此命令為 `pio` 的別名。
 
-- 原命令的文件在：
+- 檢視原命令的文件：
 
 `tldr pio`

@@ -1,7 +1,8 @@
 # bluetoothctl
 
 > Gerencia dispositivos Bluetooth a partir da linha de comando.
-> Mais informações: <https://bitbucket.org/serkanp/bluetoothctl>.
+> Veja também: `bluetui`.
+> Mais informações: <https://manned.org/bluetoothctl>.
 
 - Inicia o shell `bluetoothctl`:
 

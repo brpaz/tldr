@@ -1,16 +1,17 @@
 # conda
 
 > Eine Paket-, Abhängigkeits- und Umgebungsverwaltung für beliebige Programmiersprachen.
-> Manche Unterbefehle wie `conda create` sind separat dokumentiert.
-> Weitere Informationen: <https://github.com/conda/conda>.
+> Manche Unterbefehle wie `create` sind separat dokumentiert.
+> Siehe auch: `mamba`.
+> Weitere Informationen: <https://docs.conda.io/projects/conda/en/latest/commands/index.html>.
 
 - Erstelle eine neue Umgebung mit den zu installierenden Paketen:
 
-`conda create --name {{umgebungsname}} {{python=3.9 matplotlib}}`
+`conda create {{[-n|--name]}} {{umgebungsname}} {{python=3.9 matplotlib}}`
 
 - Liste alle Umgebungen auf:
 
-`conda info --envs`
+`conda info {{[-e|--envs]}}`
 
 - Lade eine Umgebung:
 
@@ -22,7 +23,7 @@
 
 - Lösche eine Umgebung (entferne alle Pakete):
 
-`conda remove --name {{umgebungsname}} --all`
+`conda remove {{[-n|--name]}} {{umgebungsname}} --all`
 
 - Installiere Pakete in die derzeit geladene Umgebung:
 
@@ -34,4 +35,4 @@
 
 - Lösche alle ungenutzten Pakete und leere den Cache:
 
-`conda clean --all`
+`conda clean {{[-a|--all]}}`
