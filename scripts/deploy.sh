@@ -35,7 +35,7 @@ function initialize {
 function upload_assets {
   #git clone --quiet --depth 1 "git@github.com:tldr-pages/tldr-pages.github.io.git" "$SITE_HOME"
   # 
-  sha256sum -- index.json *.zip > tldr.sha256sums
+  sha256sum -- index.json *.zip $LANG_ARCHIVES/*.zip > tldr.sha256sums
 
   # Old way of distributing assets. This needs to be deleted later.
   # git add -A
