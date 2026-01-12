@@ -34,13 +34,7 @@ function initialize {
 
 function upload_assets {
   #git clone --quiet --depth 1 "git@github.com:tldr-pages/tldr-pages.github.io.git" "$SITE_HOME"
-
-  cp -f "$TLDR_ARCHIVE" "$SITE_HOME/assets/"
-  find "$LANG_ARCHIVES" -maxdepth 1 -name "*.zip" -exec cp -f {} "$SITE_HOME/assets/" \;
-  cp -f "$INDEX" "$SITE_HOME/assets/"
-  find "$PDFS" -maxdepth 1 -name "*.pdf" -exec cp -f {} "$SITE_HOME/assets/" \;
-
-  cd "$SITE_HOME/assets"
+  # 
   sha256sum -- index.json *.zip > tldr.sha256sums
 
   # Old way of distributing assets. This needs to be deleted later.
