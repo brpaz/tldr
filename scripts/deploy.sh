@@ -12,10 +12,9 @@ function initialize {
     exit 0
   fi
 
-  export SITE_HOME="$HOME/site"
-  export LANG_ARCHIVES="$GITHUB_WORKSPACE/language_archives"
-  export PDFS="$GITHUB_WORKSPACE/scripts/pdf"
-  export INDEX="$GITHUB_WORKSPACE/index.json"
+  export LANG_ARCHIVES="./language_archives"
+  export PDFS="./scripts/pdf"
+  export INDEX="./index.json"
   RELEASE_TAG="$(git describe --tags --abbrev=0)"
   export RELEASE_TAG
 
@@ -34,8 +33,11 @@ function initialize {
 
 function upload_assets {
   #git clone --quiet --depth 1 "git@github.com:tldr-pages/tldr-pages.github.io.git" "$SITE_HOME"
-  # 
-  sha256sum -- index.json *.zip $LANG_ARCHIVES/*.zip > tldr.sha256sums
+  #
+  (
+    sha256sum -- index.json *.zip
+    cd "$LANG_ARCHIVES" && sha256sum -- *.zip
+  ) >tldr.sha256sums
 
   # Old way of distributing assets. This needs to be deleted later.
   # git add -A
