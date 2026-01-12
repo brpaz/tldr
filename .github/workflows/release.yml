@@ -1,0 +1,98 @@
+name: Release
+
+on:
+  release:
+    types: [published]
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  build-and-deploy:
+    name: Build and Deploy Release Assets
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      attestations: write
+      id-token: write
+
+    steps:
+      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+        with:
+          fetch-depth: 0
+
+      - name: Fetch tags
+        run: git fetch --tags
+
+      - uses: actions/setup-python@83679a892e2d95755f2dac6acb0bfd1e9ac5d548 # v6.1.0
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - uses: actions/setup-node@395ad3262231945c25e8478fd5baf05154b1d79f # v6.1.0
+        with:
+          node-version: "lts/*"
+          cache: "npm"
+
+      - name: Install npm dependencies
+        run: npm ci
+
+      - name: Install pip dependencies
+        run: pip install -r requirements.txt -r scripts/pdf/requirements.txt -r scripts/test-requirements.txt
+
+      - name: Build archives
+        run: bash scripts/build.sh
+
+      - name: Deploy to GitHub Release
+        run: bash scripts/deploy.sh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Check for generated files
+        id: check-files
+        run: |
+          if [[ -n $(find dist -name "*.zip" -print -quit 2>/dev/null) ]]; then
+              echo "zip_exists=true" >> $GITHUB_ENV
+          else
+              echo "zip_exists=false" >> $GITHUB_ENV
+          fi
+
+          if [[ -n $(find dist -name "*.pdf" -print -quit 2>/dev/null) ]]; then
+              echo "pdf_exists=true" >> $GITHUB_ENV
+          else
+              echo "pdf_exists=false" >> $GITHUB_ENV
+          fi
+
+          if [[ -f dist/tldr.sha256sums ]]; then
+              echo "checksums_exist=true" >> $GITHUB_ENV
+          else
+              echo "checksums_exist=false" >> $GITHUB_ENV
+          fi
+
+      - name: Construct subject-path for attest
+        if: github.repository == 'brpaz/tldr'
+        id: construct-subject-path
+        run: |
+          subject_path=""
+          if [[ ${{ env.zip_exists }} == 'true' ]]; then
+            zip_files=$(find dist -name '*.zip' -printf '%p,')
+            subject_path+="${zip_files::-1}"
+          fi
+          if [[ ${{ env.pdf_exists }} == 'true' ]]; then
+            if [[ -n $subject_path ]]; then subject_path+=","; fi
+            pdf_files=$(find dist -name '*.pdf' -printf '%p,')
+            subject_path+="${pdf_files::-1}"
+          fi
+          if [[ ${{ env.checksums_exist }} == 'true' ]]; then
+            if [[ -n $subject_path ]]; then subject_path+=","; fi
+            subject_path+='dist/tldr.sha256sums'
+          fi
+          echo "subject_path=$subject_path" >> $GITHUB_ENV
+
+      - name: Attest generated files
+        if: github.repository == 'brpaz/tldr'
+        id: attest
+        uses: actions/attest-build-provenance@00014ed6ed5efc5b1ab7f7f34a39eb55d41aa4f8 # v3.1.0
+        continue-on-error: true
+        with:
+          subject-path: ${{ env.subject_path }}

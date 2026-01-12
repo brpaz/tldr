@@ -11,6 +11,7 @@ jobs:
   release:
     name: Copy release assets
     runs-on: ubuntu-latest
+    if: github.repository == 'tldr-pages/tldr'
     permissions:
       contents: write # to upload assets to releases
       attestations: write # to upload assets attestation for build provenance

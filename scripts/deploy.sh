@@ -20,20 +20,20 @@ function initialize {
   export RELEASE_TAG
 
   # Configure git.
-  git config --global user.email "tldrbotgithub@gmail.com"
-  git config --global user.name "tldr bot"
-  git config --global push.default simple
-  git config --global diff.zip.textconv "unzip -c -a"
+  # git config --global user.email "tldrbotgithub@gmail.com"
+  # git config --global user.name "tldr bot"
+  # git config --global push.default simple
+  # git config --global diff.zip.textconv "unzip -c -a"
 
-  # Decrypt and add deploy key.
-  eval "$(ssh-agent -s)"
-  echo "$DEPLOY_KEY" > id_ed25519
-  chmod 600 id_ed25519
-  ssh-add id_ed25519
+  # # Decrypt and add deploy key.
+  # eval "$(ssh-agent -s)"
+  # echo "$DEPLOY_KEY" > id_ed25519
+  # chmod 600 id_ed25519
+  # ssh-add id_ed25519
 }
 
 function upload_assets {
-  git clone --quiet --depth 1 "git@github.com:tldr-pages/tldr-pages.github.io.git" "$SITE_HOME"
+  #git clone --quiet --depth 1 "git@github.com:tldr-pages/tldr-pages.github.io.git" "$SITE_HOME"
 
   cp -f "$TLDR_ARCHIVE" "$SITE_HOME/assets/"
   find "$LANG_ARCHIVES" -maxdepth 1 -name "*.zip" -exec cp -f {} "$SITE_HOME/assets/" \;
@@ -44,14 +44,14 @@ function upload_assets {
   sha256sum -- index.json *.zip > tldr.sha256sums
 
   # Old way of distributing assets. This needs to be deleted later.
-  git add -A
-  git commit -m "[GitHub Actions] uploaded assets after commit tldr-pages/tldr@$GITHUB_SHA"
-  git push -q
-  echo "Assets (pages archive, index and checksums) deployed to the static site."
+  # git add -A
+  # git commit -m "[GitHub Actions] uploaded assets after commit tldr-pages/tldr@$GITHUB_SHA"
+  # git push -q
+  # echo "Assets (pages archive, index and checksums) deployed to the static site."
 
   # Suppress errors from unmatched patterns if some files don't exist.
   shopt -s nullglob
-  gh release --repo tldr-pages/tldr upload --clobber "$RELEASE_TAG" -- \
+  gh release --repo brpaz/tldr upload --clobber "$RELEASE_TAG" -- \
     tldr.sha256sums \
     "$TLDR_ARCHIVE" \
     "$INDEX" \

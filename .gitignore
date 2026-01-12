@@ -31,3 +31,6 @@ venv
 
 # Generated pycache
 __pycache__
+
+language_archives
+tldr.zip
