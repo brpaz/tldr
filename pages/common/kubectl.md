@@ -32,6 +32,6 @@
 
 `kubectl logs {{pod_name}}`
 
-- Run command in an existing pod:
+- Run command in an existing pod hello:
 
 `kubectl exec {{pod_name}} -- {{ls /}}`
